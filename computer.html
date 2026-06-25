@@ -1,0 +1,3950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School & and Intermediate class</title>
+
+<style>
+    /* Premium Popup */
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+z-index:9999;
+justify-content:center;
+align-items:center;
+animation:fade 0.5s;
+}
+
+
+.popup-box{
+width:90%;
+max-width:450px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:25px;
+box-shadow:0 0 30px cyan;
+color:white;
+text-align:center;
+}
+
+
+.popup-box h2{
+color:#FFD700;
+margin-bottom:20px;
+}
+
+
+.popup-box input,
+.popup-box select{
+width:100%;
+padding:12px;
+margin:8px 0;
+border:none;
+border-radius:10px;
+}
+
+
+.popup-box button{
+width:100%;
+padding:15px;
+margin-top:10px;
+background:#00ffff;
+color:black;
+font-size:18px;
+font-weight:bold;
+border:none;
+border-radius:30px;
+cursor:pointer;
+transition:0.3s;
+}
+
+
+.popup-box button:hover{
+background:#FFD700;
+transform:scale(1.05);
+}
+
+
+.close{
+float:right;
+font-size:25px;
+cursor:pointer;
+}
+
+
+@keyframes fade{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+    .success-card{
+
+background: linear-gradient(135deg,#003366,#0055aa);
+
+color: white;
+
+text-align: center;
+
+padding: 25px;
+
+border-radius: 20px;
+
+transition: 0.5s;
+
+box-shadow: 0 0 15px rgba(0,0,0,0.3);
+
+}
+
+
+.success-card:hover{
+
+transform: translateY(-15px);
+
+box-shadow: 0 0 25px #007bff;
+
+}
+
+
+.success-card h1{
+
+font-size: 40px;
+
+color: gold;
+
+}
+#topBtn{
+
+position: fixed;
+bottom: 150px;
+right: 20px;
+z-index: 9999;
+
+display: none;
+
+background: #003366;
+color: white;
+
+border: none;
+border-radius: 50%;
+
+width: 50px;
+height: 50px;
+
+font-size: 22px;
+cursor: pointer;
+
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+transition: 0.3s;
+
+}
+
+
+#topBtn:hover{
+
+transform: scale(1.1);
+background: #0055aa;
+
+}
+    #welcomeBox{
+position:fixed;
+top:30px;
+right:30px;
+background:#003366;
+color:white;
+padding:20px;
+border-radius:15px;
+font-size:20px;
+animation:slide 1s;
+z-index:9999;
+}
+
+@keyframes slide{
+from{
+right:-300px;
+}
+to{
+right:30px;
+}
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(-45deg,#0f172a,#2563eb,#06b6d4,#7c3aed);
+background-size:400% 400%;
+animation:gradient 15s ease infinite;
+color:white;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+nav{
+position:sticky;
+top:0;
+background:rgba(0,0,0,0.7);
+padding:15px;
+text-align:center;
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:10px;
+font-weight:bold;
+font-size:18px;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+.notice{
+background:yellow;
+color:black;
+padding:8px;
+font-weight:bold;
+}
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+text-shadow:2px 2px 10px black;
+}
+
+.hero p{
+font-size:24px;
+margin-top:15px;
+}
+
+.btn{
+padding:15px 30px;
+background:white;
+color:#111;
+text-decoration:none;
+border-radius:30px;
+margin-top:20px;
+font-weight:bold;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin:50px 0 30px;
+}
+
+.container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+padding:20px;
+}
+
+.card{
+width:300px;
+background:rgba(255,255,255,0.15);
+padding:20px;
+border-radius:15px;
+backdrop-filter:blur(8px);
+}
+
+.card:hover{
+transform:translateY(-10px);
+transition:0.5s;
+}
+
+
+
+/* Ring Animation */
+
+@keyframes ring{
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.15);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+form input,
+form select,
+form textarea {
+
+width: 90%;
+
+padding: 15px;
+
+margin: 10px;
+
+border: 2px solid #003366;
+
+border-radius: 10px;
+
+font-size: 16px;
+
+}
+
+
+form button {
+
+background: #003366;
+
+color: white;
+
+padding: 15px 30px;
+
+border: none;
+
+border-radius: 10px;
+
+font-size: 18px;
+
+cursor: pointer;
+
+transition: 0.3s;
+
+}
+
+
+form button:hover {
+
+background: #0055aa;
+
+transform: scale(1.05);
+
+}
+/* Certificate Section */
+
+.certificate-section{
+    padding:80px 5%;
+    text-align:center;
+}
+
+
+.certificate-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+
+/* Certificate Cards */
+
+.certificate-card{
+    width:320px;
+    background:rgba(255,255,255,0.12);
+    border-radius:25px;
+    overflow:hidden;
+    color:white;
+    box-shadow:0 0 25px cyan;
+    transition:0.6s;
+}
+
+
+.certificate-card:hover{
+    transform:
+    perspective(1000px)
+    rotateY(15deg)
+    scale(1.08);
+
+    box-shadow:
+    0 0 40px gold;
+}
+
+
+.certificate-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+
+.certificate-card h2{
+    color:#FFD700;
+    margin:15px;
+}
+
+
+.certificate-card p{
+    padding:0 20px 25px;
+}
+
+
+/* Achievement Slider */
+
+.achievement-slider{
+    margin-top:60px;
+    overflow:hidden;
+    border-radius:40px;
+    background:rgba(0,255,255,0.15);
+    padding:20px;
+}
+
+
+.achievement-track{
+    display:flex;
+    width:max-content;
+    animation:slideAchievement 20s linear infinite;
+}
+
+
+.achievement{
+    font-size:22px;
+    color:#FFD700;
+    margin-right:80px;
+    white-space:nowrap;
+    font-weight:bold;
+}
+
+
+/* Animation */
+
+@keyframes slideAchievement{
+
+0%{
+    transform:translateX(100%);
+}
+
+100%{
+    transform:translateX(-100%);
+}
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.certificate-card{
+    width:90%;
+}
+
+
+.achievement{
+    font-size:18px;
+    margin-right:50px;
+}
+
+}
+/* Statistics */
+
+.stats-section,
+.id-section,
+.login-section{
+
+padding:70px 5%;
+text-align:center;
+
+}
+
+
+.stats-container{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+
+}
+
+
+.stat-box{
+
+width:220px;
+padding:30px;
+
+background:rgba(255,255,255,0.15);
+
+backdrop-filter:blur(15px);
+
+border-radius:25px;
+
+color:white;
+
+box-shadow:0 0 20px cyan;
+
+transition:0.5s;
+
+}
+
+
+.stat-box:hover{
+
+transform:translateY(-15px);
+box-shadow:0 0 40px gold;
+
+}
+
+
+.counter{
+
+font-size:45px;
+color:#FFD700;
+
+}
+
+
+/* ID Card */
+
+.id-card{
+
+width:350px;
+margin:auto;
+
+padding:25px;
+
+background:linear-gradient(135deg,#001,#004,#00aaff);
+
+color:white;
+
+border-radius:25px;
+
+box-shadow:0 0 35px cyan;
+
+}
+
+
+.id-card img{
+
+height:80px;
+margin:15px;
+
+}
+
+
+/* Login */
+
+.login-box{
+
+width:350px;
+max-width:90%;
+
+margin:auto;
+
+background:rgba(255,255,255,0.15);
+
+backdrop-filter:blur(10px);
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:0 0 25px cyan;
+
+}
+
+
+.login-box input{
+
+width:90%;
+
+padding:15px;
+
+margin:10px;
+
+border-radius:15px;
+
+border:none;
+
+}
+
+
+.login-box button{
+
+width:90%;
+
+margin-top:15px;
+
+}
+/* AI Button */
+
+.ai-button {
+
+position: fixed;
+right: 25px;
+bottom: 30px;
+
+width: 65px;
+height: 65px;
+
+background: #00ffff;
+color: black;
+
+border-radius: 50%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:30px;
+cursor:pointer;
+
+box-shadow:0 0 30px cyan;
+
+z-index:9999;
+
+animation: floatAI 3s infinite;
+
+}
+
+
+@keyframes floatAI {
+
+50% {
+transform: translateY(-12px);
+}
+
+}
+
+
+/* Chat Box */
+
+.ai-chat {
+
+position: fixed;
+
+right: 100px;
+bottom: 30px;
+
+width: 350px;
+height: 450px;
+
+background: rgba(255,255,255,0.15);
+
+backdrop-filter: blur(15px);
+
+border-radius: 25px;
+
+display:none;
+
+flex-direction:column;
+
+overflow:hidden;
+
+color:white;
+
+box-shadow:0 0 35px cyan;
+
+z-index:9999;
+
+}
+
+
+.ai-header {
+
+background:#001f3f;
+
+padding:15px;
+
+display:flex;
+
+justify-content:space-between;
+
+}
+
+
+.chat-body {
+
+flex:1;
+
+padding:15px;
+
+overflow-y:auto;
+
+}
+
+
+.message {
+
+padding:10px;
+
+margin:10px;
+
+border-radius:15px;
+
+}
+
+
+.bot {
+
+background:#0044aa;
+
+}
+
+
+.user {
+
+background:#008000;
+
+text-align:right;
+
+}
+
+
+/* Input */
+
+.chat-input {
+
+display:flex;
+
+padding:10px;
+
+gap:5px;
+
+}
+
+
+.chat-input input {
+
+flex:1;
+
+padding:10px;
+
+border-radius:10px;
+
+border:none;
+
+}
+
+
+/* Theme */
+
+.theme-btn {
+
+position:fixed;
+
+left:20px;
+bottom:20px;
+
+width:55px;
+height:55px;
+
+border-radius:50%;
+
+z-index:9999;
+
+}
+
+
+/* Clock */
+
+.clock {
+
+position:fixed;
+
+top:120px;
+right:20px;
+
+background:black;
+
+color:#00ffff;
+
+padding:10px 20px;
+
+border-radius:20px;
+
+box-shadow:0 0 20px cyan;
+
+z-index:999;
+
+}
+
+
+/* Light Mode */
+
+.light-mode {
+
+background:white !important;
+
+color:black !important;
+
+}
+/* Student Dashboard */
+
+.dashboard {
+
+padding:80px 5%;
+text-align:center;
+
+}
+
+
+/* Profile */
+
+.student-profile {
+
+width:300px;
+margin:auto;
+
+padding:25px;
+
+background:rgba(255,255,255,0.15);
+
+border-radius:25px;
+
+color:white;
+
+box-shadow:0 0 25px cyan;
+
+}
+
+
+.student-profile img {
+
+height:80px;
+
+}
+
+
+/* Progress */
+
+.progress-box {
+
+margin:40px auto;
+
+width:500px;
+max-width:90%;
+
+background:rgba(255,255,255,0.15);
+
+padding:30px;
+
+border-radius:25px;
+
+color:white;
+
+box-shadow:0 0 25px cyan;
+
+}
+
+
+.progress-bar {
+
+width:100%;
+height:30px;
+
+background:#222;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+
+.progress {
+
+width:75%;
+height:100%;
+
+background:linear-gradient(90deg,#00ffff,#00ff00);
+
+color:black;
+
+font-weight:bold;
+
+line-height:30px;
+
+animation:loadProgress 3s;
+
+}
+
+
+@keyframes loadProgress {
+
+from{
+width:0;
+}
+
+to{
+width:75%;
+}
+
+}
+
+
+/* Exam */
+
+.exam-box {
+
+width:700px;
+max-width:90%;
+
+margin:auto;
+
+padding:30px;
+
+background:rgba(255,255,255,0.15);
+
+border-radius:25px;
+
+color:white;
+
+box-shadow:0 0 30px cyan;
+
+}
+
+
+.question {
+
+text-align:left;
+
+margin:25px;
+
+}
+
+
+.question label {
+
+display:block;
+
+margin:10px;
+
+}
+
+
+#result {
+
+color:#FFD700;
+
+margin-top:20px;
+
+}
+/* Live Class Section */
+
+.live-class{
+
+padding:80px 5%;
+
+text-align:center;
+
+color:white;
+
+}
+
+
+/* Boxes */
+
+.meeting-box,
+.assignment-box,
+.attendance,
+.ranking{
+
+width:500px;
+
+max-width:90%;
+
+margin:30px auto;
+
+padding:30px;
+
+background:rgba(255,255,255,0.15);
+
+backdrop-filter:blur(15px);
+
+border-radius:25px;
+
+box-shadow:0 0 30px cyan;
+
+transition:0.5s;
+
+}
+
+
+/* Hover Animation */
+
+.meeting-box:hover,
+.assignment-box:hover,
+.attendance:hover,
+.ranking:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+0 0 50px #FFD700;
+
+}
+
+
+/* Buttons */
+
+.live-class button{
+
+padding:15px 35px;
+
+font-size:18px;
+
+border-radius:30px;
+
+border:none;
+
+cursor:pointer;
+
+}
+
+
+/* Attendance */
+
+.attendance-bar{
+
+width:100%;
+
+height:35px;
+
+background:#222;
+
+border-radius:30px;
+
+overflow:hidden;
+
+}
+
+
+#attendanceFill{
+
+width:90%;
+
+height:100%;
+
+background:
+linear-gradient(90deg,
+cyan, lime);
+
+color:black;
+
+font-weight:bold;
+
+line-height:35px;
+
+animation:
+attendanceLoad 3s;
+
+}
+
+
+@keyframes attendanceLoad{
+
+from{
+
+width:0;
+
+}
+
+to{
+
+width:90%;
+
+}
+
+}
+
+
+/* Ranking */
+
+.ranking ol{
+
+text-align:left;
+
+font-size:20px;
+
+}
+
+
+#uploadMessage{
+
+color:#FFD700;
+
+margin-top:15px;
+
+}
+/* AI Learning Hub */
+
+.ai-learning{
+
+padding:80px 5%;
+text-align:center;
+color:white;
+
+}
+
+
+.ai-teacher,
+.compiler,
+.community,
+.leaderboard{
+
+width:800px;
+max-width:95%;
+
+margin:35px auto;
+padding:30px;
+
+background:rgba(255,255,255,0.15);
+
+backdrop-filter:blur(15px);
+
+border-radius:25px;
+
+box-shadow:0 0 30px cyan;
+
+transition:0.5s;
+
+}
+
+
+.ai-teacher:hover,
+.compiler:hover,
+.community:hover,
+.leaderboard:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 40px gold;
+
+}
+
+
+#question,
+#chatInput,
+#language,
+#codeArea{
+
+width:90%;
+padding:15px;
+margin:12px;
+
+border-radius:15px;
+border:none;
+
+}
+
+
+#codeArea{
+
+height:200px;
+resize:none;
+
+}
+
+
+#output{
+
+width:95%;
+height:250px;
+
+background:white;
+
+border-radius:20px;
+
+}
+
+
+#chatBox{
+
+height:200px;
+
+background:#111;
+
+border-radius:15px;
+
+padding:15px;
+
+overflow-y:auto;
+
+text-align:left;
+
+}
+
+
+.message{
+
+background:#0044aa;
+
+padding:10px;
+
+border-radius:10px;
+
+margin:10px 0;
+
+}
+
+
+#aiAnswer{
+
+background:#001a33;
+
+padding:20px;
+
+border-radius:15px;
+
+margin:20px;
+
+}
+/* Mobile Dashboard */
+
+.mobile-app{
+padding:80px 5%;
+text-align:center;
+color:white;
+}
+
+
+.phone{
+
+width:350px;
+height:650px;
+
+margin:auto;
+
+background:black;
+
+border-radius:40px;
+
+border:5px solid cyan;
+
+box-shadow:
+0 0 40px cyan;
+
+overflow:hidden;
+
+}
+
+
+.phone-top{
+
+background:#001f3f;
+
+padding:20px;
+
+font-size:18px;
+
+color:#FFD700;
+
+font-weight:bold;
+
+}
+
+
+.app-content{
+
+padding:20px;
+
+}
+
+
+.app-card{
+
+background:rgba(255,255,255,0.15);
+
+border-radius:20px;
+
+padding:20px;
+
+margin:20px 0;
+
+box-shadow:
+0 0 20px #00ffff;
+
+transition:0.5s;
+
+}
+
+
+.app-card:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+0 0 30px gold;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="notice">
+<marquee>
+Admissions Open | Python | Java | HTML | CSS | AI | Hardware & Networking |
+Contact: +91 9603312393
+</marquee>
+</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#courses">Courses</a>
+<a href="#languages">Languages</a>
+<a href="#" onclick="login()">Student Login</a>
+<a href="#career">Career</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+
+<h1>School & and Intermediate class</h1>
+
+<h2 id="typing"></h2>
+
+<p>
+Papaiahpet Chaman, Warangal
+</p>
+
+<a href="#courses" class="btn">
+Explore Courses
+</a>
+
+</section>
+
+<!-- ABOUT SECTION -->
+
+<h2 class="section-title" id="about">
+About School & and Intermediate class
+</h2>
+
+<div class="container">
+
+<div class="card">
+<h2>Lab Practising</h2>
+<p>
+Students gain practical knowledge through
+real-time projects and computer lab sessions.
+</p>
+</div>
+
+<div class="card">
+<h2>Python, HTML & Java Classes</h2>
+<p>
+Professional training in Python,
+HTML, CSS, Java and Web Development.
+</p>
+</div>
+
+<div class="card">
+<h2>Practical Lab</h2>
+<p>
+Modern lab facilities help students gain
+industry-ready experience.
+</p>
+</div>
+
+</div>
+
+<!-- MISSION & VISION -->
+
+<h2 class="section-title">
+Mission & Vision
+</h2>
+
+<div class="container">
+
+<div class="card">
+<h2>Our Mission</h2>
+<p>
+To provide quality technical education and
+practical training for every student.
+</p>
+</div>
+
+<div class="card">
+<h2>Our Vision</h2>
+<p>
+To become one of the best technology training
+institutes in Warangal.
+</p>
+</div>
+
+</div>
+
+<!-- DIRECTOR MESSAGE -->
+
+<h2 class="section-title">
+Director Message
+</h2>
+
+<div class="container">
+
+<div class="card" style="width:700px;">
+
+<h2>Afsar Hussain</h2>
+
+<p>
+Welcome to School & and Intermediate class.
+Our goal is to help students learn modern
+programming languages, Technology skills,
+Hardware knowledge and career development.
+</p>
+
+<br>
+
+<p>
+We believe practical learning is the key
+to success in today's technology world.
+</p>
+
+</div>
+
+</div>
+
+<!-- STATISTICS -->
+
+<h2 class="section-title">
+Institute Statistics
+</h2>
+
+<div class="container">
+
+    <div class="card">
+<h2 id="students">100+</h2>
+<p>Students Trained</p>
+</div>
+
+<div class="card">
+<h1>10+</h1>
+<p>Courses Available</p>
+</div>
+
+<div class="card">
+<h1>100+</h1>
+<p>Projects Completed</p>
+</div>
+
+<div class="card">
+<h1>95%</h1>
+<p>Student Satisfaction</p>
+</div>
+
+</div>
+
+<!-- =========================
+     PREMIUM COMPUTER COURSES
+========================== -->
+
+<section class="courses">
+
+<h1 class="title">
+💻 Computer & Technology Courses
+</h1>
+
+<div class="course-container">
+
+
+<!-- Course 1 -->
+
+<div class="course-card">
+
+<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600">
+
+<h2>Python Programming</h2>
+
+<p>
+🐍 Learn Python from basics to advanced,
+automation and real projects.
+</p>
+
+<h3>⏳ Duration: 3 Months</h3>
+
+<h3>💰 Fees: ₹5,000</h3>
+
+<h4>Level: Beginner → Advanced</h4>
+
+<button onclick="openForm('Python Programming')">
+Join Now
+</button>
+
+</div>
+
+
+<!-- Course 2 -->
+
+<div class="course-card">
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600">
+
+<h2>Web Development</h2>
+
+<p>
+🌐 Create responsive websites using
+HTML, CSS & JavaScript.
+</p>
+
+<h3>⏳ Duration: 4 Months</h3>
+
+<h3>💰 Fees: ₹8,000</h3>
+
+<h4>Level: Beginner → Professional</h4>
+
+<button onclick="openForm('Web Development')">
+Join Now
+</button>
+
+</div>
+
+
+<!-- Course 3 -->
+
+<div class="course-card">
+
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600">
+
+<h2>Java Programming</h2>
+
+<p>
+☕ Build software applications using
+Core and Advanced Java.
+</p>
+
+<h3>⏳ Duration: 4 Months</h3>
+
+<h3>💰 Fees: ₹6,000</h3>
+
+<h4>Level: Intermediate</h4>
+
+<button onclick="openForm('Java Programming')">
+Join Now
+</button>
+</div>
+
+
+<!-- Course 4 -->
+
+<div class="course-card">
+
+<img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600">
+
+<h2>Artificial Intelligence</h2>
+
+<p>
+🤖 Learn AI tools, Prompt Engineering
+and future technologies.
+</p>
+
+<h3>⏳ Duration: 3 Months</h3>
+
+<h3>💰 Fees: ₹10,000</h3>
+
+<h4>Level: Advanced</h4>
+
+<button onclick="openForm('Artificial Intelligence')">
+Join Now
+</button>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* Main Section */
+
+.courses{
+
+padding:70px 5%;
+background:linear-gradient(135deg,#020024,#090979,#00d4ff);
+
+}
+
+
+.title{
+
+text-align:center;
+font-size:50px;
+color:white;
+margin-bottom:50px;
+
+}
+
+
+/* Cards Container */
+
+.course-container{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:35px;
+
+}
+
+
+/* 3D Course Card */
+
+.course-card {
+    width:320px;
+    background:rgba(255,255,255,0.15);
+    border-radius:25px;
+    transition:0.5s;
+    animation:floating 4s ease-in-out infinite;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+
+.course-card:hover  {
+
+box-shadow:
+0 0 25px cyan,
+0 0 50px blue;
+
+transform:
+perspective(1000px)
+rotateY(10deg)
+rotateX(10deg)
+translateY(-20px)
+scale(1.07);
+
+box-shadow:
+0 0 40px cyan,
+0 0 80px blue;
+}
+/*Floating Animation*/
+
+@keyframes floating {
+
+0%{
+    transform: translateY(0);
+}
+
+50%{
+    transform: translateY(-15px);
+}
+
+100%{
+    transform: translateY(0);
+}
+
+}
+
+/* Images */
+
+.course-card img{
+
+width:100%;
+height:220px;
+object-fit:cover;
+
+}
+
+
+/* Text */
+
+.course-card h2{
+
+margin:15px;
+color:#FFD700;
+
+}
+
+
+.course-card p,
+.course-card h3,
+.course-card h4{
+
+margin:15px;
+
+}
+
+
+/* Button */
+
+.course-card button{
+
+margin:20px;
+
+width:85%;
+
+padding:15px;
+
+border:none;
+
+border-radius:30px;
+
+background:#FFD700;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+.course-card button:hover{
+
+background:white;
+
+transform:scale(1.05);
+
+}
+
+
+/* Mobile */
+
+@media(max-width:700px){
+
+.title{
+
+font-size:35px;
+
+}
+
+.course-card{
+
+width:95%;
+
+}
+
+}
+
+</style>
+
+<!-- COURSES SECTION -->
+
+<h2 class="section-title" id="courses">
+Courses Offered
+</h2>
+
+<div class="container">
+
+<div class="card">
+<h2>Python Programming</h2>
+<p>
+Duration: 3 Months
+<br><br>
+Learn Python from basics to advanced.
+Projects Included.
+</p>
+</div>
+
+<div class="card">
+<h2>HTML & CSS</h2>
+<p>
+Duration: 2 Months
+<br><br>
+Create modern responsive websites.
+</p>
+</div>
+
+<div class="card">
+<h2>Java Programming</h2>
+<p>
+Duration: 4 Months
+<br><br>
+Develop software and applications.
+</p>
+</div>
+
+<div class="card">
+<h2>Web Development</h2>
+<p>
+Duration: 4 Months
+<br><br>
+HTML, CSS, JavaScript and Projects.
+</p>
+</div>
+
+<div class="card">
+<h2>Hardware & Networking</h2>
+<p>
+Duration: 3 Months
+<br><br>
+Computer assembling and troubleshooting.
+</p>
+</div>
+
+<div class="card">
+<h2>Artificial Intelligence</h2>
+<p>
+Introduction to AI and Machine Learning.
+</p>
+</div>
+
+</div>
+<!-- Certificate Showcase -->
+
+<section class="certificate-section">
+
+<h1 class="title">
+🏆 Our Certificates & Achievements
+</h1>
+
+
+<div class="certificate-container">
+
+
+<div class="certificate-card">
+
+<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600">
+
+<h2>Course Completion Certificate</h2>
+
+<p>
+Awarded to students after successful completion of professional courses.
+</p>
+
+</div>
+
+
+<div class="certificate-card">
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600">
+
+<h2>Student Achievement</h2>
+
+<p>
+Our students build projects and achieve excellent results.
+</p>
+
+</div>
+
+
+<div class="certificate-card">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600">
+
+<h2>Technology Excellence</h2>
+
+<p>
+Recognizing innovation, creativity, and technical skills.
+</p>
+
+</div>
+
+
+</div>
+
+<!-- Institute Statistics -->
+
+<section class="stats-section">
+
+<h1 class="title">
+📊 Our Achievements
+</h1>
+
+
+<div class="stats-container">
+
+<div class="stat-box">
+<h2 class="counter" data-target="5000">0</h2>
+<p>Students Trained</p>
+</div>
+
+
+<div class="stat-box">
+<h2 class="counter" data-target="20">0</h2>
+<p>Professional Courses</p>
+</div>
+
+
+<div class="stat-box">
+<h2 class="counter" data-target="3000">0</h2>
+<p>Certificates Issued</p>
+</div>
+
+
+<div class="stat-box">
+<h2 class="counter" data-target="98">0</h2>
+<p>Success Rate %</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- Digital ID Card -->
+
+<section class="id-section">
+
+<h1 class="title">
+🪪 Student ID Card
+</h1>
+
+
+<div class="id-card">
+
+<h2>FIRMWARE INSTITUTE OF TECHNOLOGY</h2>
+
+<img src="fit-logo.png">
+
+<h3>Name: Student Name</h3>
+
+<h3>ID: FIT2026001</h3>
+
+<h3>Course: Python Programming</h3>
+
+<h3>Batch: Morning</h3>
+
+</div>
+
+</section>
+
+
+
+<!-- Login Portal -->
+
+<section class="login-section">
+
+<h1 class="title">
+🔐 Student Login Portal
+</h1>
+
+
+<div class="login-box">
+
+<input type="text" placeholder="Student ID">
+
+<input type="password" placeholder="Password">
+
+
+<button>
+Login
+</button>
+
+<p>
+New Student? Contact Administration
+</p>
+
+</div>
+
+</section>
+<!-- Achievement Slider -->
+
+<div class="achievement-slider">
+
+<div class="achievement-track">
+
+<div class="achievement">
+🥇 5000+ Students Successfully Trained
+</div>
+
+<div class="achievement">
+💻 1000+ Real Time Projects Completed
+</div>
+
+<div class="achievement">
+🏆 98% Student Success Rate
+</div>
+
+<div class="achievement">
+🌎 Online & Offline Classes Available
+</div>
+
+<div class="achievement">
+🎓 Professional Certificates Provided
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- Student Dashboard -->
+
+<section class="dashboard">
+
+<h1 class="title">
+📚 Student Dashboard
+</h1>
+
+
+<!-- Student Profile -->
+
+<div class="student-profile">
+
+<img src="fit-logo.png">
+
+<h2>Student Name</h2>
+
+<p>ID: FIT2026001</p>
+
+<p>Course: Full Stack Development</p>
+
+</div>
+
+
+<!-- Course Progress -->
+
+<div class="progress-box">
+
+<h2>📈 Course Progress</h2>
+
+<div class="progress-bar">
+
+<div class="progress">
+75%
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Online Exam -->
+
+<div class="exam-box">
+
+<h2>
+📝 Online Test
+</h2>
+
+
+<div class="question">
+
+<p>
+1. HTML stands for?
+</p>
+
+
+<label>
+<input type="radio" name="q1" value="0">
+Hyper Text Machine Language
+</label>
+
+
+<label>
+<input type="radio" name="q1" value="1">
+Hyper Text Markup Language
+</label>
+
+</div>
+
+
+
+<div class="question">
+
+<p>
+2. JavaScript is used for?
+</p>
+
+
+<label>
+<input type="radio" name="q2" value="1">
+Making websites interactive
+</label>
+
+
+<label>
+<input type="radio" name="q2" value="0">
+Only designing logos
+</label>
+
+</div>
+
+
+
+<div class="question">
+
+<p>
+3. AI means?
+</p>
+
+
+<label>
+<input type="radio" name="q3" value="1">
+Artificial Intelligence
+</label>
+
+
+<label>
+<input type="radio" name="q3" value="0">
+Automatic Internet
+</label>
+
+</div>
+
+
+<button onclick="checkExam()">
+Submit Test
+</button>
+
+
+<h2 id="result">
+</h2>
+
+
+</div>
+
+</section>
+<!-- Live Classes Portal -->
+
+<section class="live-class">
+
+<h1 class="title">
+🎥 Live Classes Portal
+</h1>
+
+
+<!-- Meeting Room -->
+
+<div class="meeting-box">
+
+<h2>
+📹 Today's Live Class
+</h2>
+
+<h3>
+Course: Full Stack Web Development
+</h3>
+
+<p>
+Time: 6:00 PM - 7:30 PM
+</p>
+
+
+<a href="https://meet.google.com"
+target="_blank">
+
+<button>
+🚀 Join Live Class
+</button>
+
+</a>
+
+</div>
+
+
+<!-- Assignment Upload -->
+
+<div class="assignment-box">
+
+<h2>
+📂 Assignment Submission
+</h2>
+
+
+<input type="file"
+id="assignment">
+
+
+<button onclick="uploadAssignment()">
+Upload Assignment
+</button>
+
+
+<h3 id="uploadMessage">
+</h3>
+
+</div>
+
+
+<!-- Attendance -->
+
+<div class="attendance">
+
+<h2>
+📊 Attendance Record
+</h2>
+
+
+<div class="attendance-bar">
+
+<div id="attendanceFill">
+90%
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Student Ranking -->
+
+<div class="ranking">
+
+<h2>
+🏅 Top Students
+</h2>
+
+
+<ol>
+
+<li>
+Aarav - 98%
+</li>
+
+<li>
+Diya - 95%
+</li>
+
+<li>
+Rahul - 92%
+</li>
+
+</ol>
+
+
+</div>
+
+</section>
+<!-- AI Teacher & Coding Hub -->
+
+<section class="ai-learning">
+
+<h1 class="title">
+🤖 AI Learning Hub
+</h1>
+
+
+<!-- AI Teacher -->
+
+<div class="ai-teacher">
+
+<h2>👨‍🏫 FIT AI Teacher</h2>
+
+<div id="aiAnswer">
+Hello Student! Ask me anything about programming.
+</div>
+
+
+<input 
+type="text"
+id="question"
+placeholder="Ask your coding question">
+
+
+<button onclick="askTeacher()">
+Ask AI Teacher
+</button>
+
+</div>
+
+
+
+<!-- Coding Compiler -->
+
+<div class="compiler">
+
+<h2>
+💻 Coding Playground
+</h2>
+
+
+<select id="language">
+
+<option>HTML</option>
+<option>CSS</option>
+<option>JavaScript</option>
+
+</select>
+
+
+<textarea id="codeArea"
+placeholder="Write your code here..."></textarea>
+
+
+<button onclick="runCode()">
+▶ Run Code
+</button>
+
+
+<iframe id="output"></iframe>
+
+
+</div>
+
+
+
+<!-- Student Chat -->
+
+<div class="community">
+
+<h2>
+💬 Student Community
+</h2>
+
+
+<div id="chatBox">
+
+<div class="message">
+Welcome to FIT Community!
+</div>
+
+</div>
+
+
+<input 
+type="text"
+id="chatInput"
+placeholder="Type message">
+
+
+<button onclick="sendChat()">
+Send
+</button>
+
+
+</div>
+
+
+
+<!-- Leaderboard -->
+
+<div class="leaderboard">
+
+<h2>
+🏆 Coding Champions
+</h2>
+
+
+<ol>
+
+<li>Rohan ⭐ 1500 Points</li>
+<li>Ananya ⭐ 1300 Points</li>
+<li>Arjun ⭐ 1200 Points</li>
+<li>Sneha ⭐ 1000 Points</li>
+
+</ol>
+
+
+</div>
+
+
+</section>
+<!-- FIT Mobile App Dashboard -->
+
+<section class="mobile-app">
+
+<h1 class="title">
+📱 FIT Student Mobile Dashboard
+</h1>
+
+
+<!-- Mobile Screen -->
+
+<div class="phone">
+
+<div class="phone-top">
+FIRMWARE INSTITUTE OF TECHNOLOGY
+</div>
+
+
+<div class="app-content">
+
+
+<div class="app-card">
+🔔 New Notification
+<p>Python class starts at 6:00 PM today.</p>
+</div>
+
+
+<div class="app-card">
+📊 Course Progress
+<p>Web Development: 85% Completed</p>
+</div>
+
+
+<div class="app-card">
+🏆 Achievement
+<p>Completed 10 coding challenges.</p>
+</div>
+
+
+<div class="app-card">
+🎓 Certificate
+<button onclick="downloadCertificate()">
+Download Certificate
+</button>
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROGRAMMING LANGUAGES SECTION -->
+
+<h2 class="section-title" id="languages">
+Programming Languages of Computer
+</h2>
+
+<div class="container">
+
+<div class="card">
+<h2>C Programming</h2>
+<p>
+C is a powerful programming language used for
+operating systems, embedded systems and software.
+</p>
+</div>
+
+<div class="card">
+<h2>C++ Programming</h2>
+<p>
+C++ is used in game development,
+software applications and high-performance systems.
+</p>
+</div>
+
+<div class="card">
+<h2>Java</h2>
+<p>
+Java is used for Android apps,
+desktop software and enterprise applications.
+</p>
+</div>
+
+<div class="card">
+<h2>Python</h2>
+<p>
+Python is used in AI, Data Science,
+Machine Learning and Automation.
+</p>
+</div>
+
+<div class="card">
+<h2>HTML</h2>
+<p>
+HTML creates the structure of web pages.
+</p>
+</div>
+
+<div class="card">
+<h2>CSS</h2>
+<p>
+CSS makes websites attractive and responsive.
+</p>
+</div>
+
+<div class="card">
+<h2>JavaScript</h2>
+<p>
+JavaScript adds animations and dynamic features.
+</p>
+</div>
+
+<div class="card">
+<h2>PHP</h2>
+<p>
+PHP is used for dynamic websites and web applications.
+</p>
+</div>
+
+<div class="card">
+<h2>SQL</h2>
+<p>
+SQL is used for managing databases.
+</p>
+</div>
+
+</div>
+
+<!-- CAREER OPPORTUNITIES -->
+
+<h2 class="section-title" id="career">
+Career Opportunities
+</h2>
+
+<div class="container">
+
+<div class="card">
+<h2>Web Developer</h2>
+<p>Create websites and web applications.</p>
+</div>
+
+<div class="card">
+<h2>Python Developer</h2>
+<p>Build software, AI and automation projects.</p>
+</div>
+
+<div class="card">
+<h2>Java Developer</h2>
+<p>Develop enterprise applications and software.</p>
+</div>
+
+<div class="card">
+<h2>Software Engineer</h2>
+<p>Design and develop modern software solutions.</p>
+</div>
+
+<div class="card">
+<h2>AI Engineer</h2>
+<p>Build Artificial Intelligence applications.</p>
+</div>
+
+<div class="card">
+<h2>Cyber Security Analyst</h2>
+<p>Protect systems and networks from cyber threats.</p>
+</div>
+
+<div class="card">
+<h2>Cloud Engineer</h2>
+<p>Manage cloud infrastructure and services.</p>
+</div>
+
+<div class="card">
+<h2>Data Analyst</h2>
+<p>Analyze business and technology data.</p>
+</div>
+
+</div>
+
+<!-- SALARY GUIDE -->
+
+<h2 class="section-title">
+Career Salary Guide
+</h2>
+
+<div class="container">
+
+<div class="card">
+<h2>Web Developer</h2>
+<p>₹4 LPA – ₹10 LPA</p>
+</div>
+
+<div class="card">
+<h2>Python Developer</h2>
+<p>₹5 LPA – ₹15 LPA</p>
+</div>
+
+<div class="card">
+<h2>Java Developer</h2>
+<p>₹5 LPA – ₹18 LPA</p>
+</div>
+
+<div class="card">
+<h2>AI Engineer</h2>
+<p>₹8 LPA – ₹30 LPA</p>
+</div>
+
+<div class="card">
+<h2>Cyber Security Analyst</h2>
+<p>₹6 LPA – ₹20 LPA</p>
+</div>
+
+<div class="card">
+<h2>Cloud Engineer</h2>
+<p>₹7 LPA – ₹25 LPA</p>
+</div>
+
+</div>
+
+<!-- FACILITIES -->
+
+<h2 class="section-title">
+Institute Facilities
+</h2>
+
+<div class="container">
+
+<div class="card">
+<h2>Computer Lab</h2>
+<p>Modern computers with latest software.</p>
+</div>
+
+<div class="card">
+<h2>Practical Lab</h2>
+<p>Hands-on practical learning sessions.</p>
+</div>
+
+<div class="card">
+<h2>Smart Classroom</h2>
+<p>Digital teaching with projectors and presentations.</p>
+</div>
+
+<div class="card">
+<h2>Career Guidance</h2>
+<p>Support for jobs and career planning.</p>
+</div>
+
+<div class="card">
+<h2>Project Assistance</h2>
+<p>Guidance for real-world projects.</p>
+</div>
+
+<div class="card">
+<h2>Free Wi-Fi</h2>
+<p>Internet access for learning and research.</p>
+</div>
+
+</div>
+
+<!-- AI SECTION -->
+
+<h2 class="section-title">
+Artificial Intelligence & Future Technologies
+</h2>
+
+<div class="container">
+
+<div class="card">
+<h2>Artificial Intelligence</h2>
+<p>
+Learn how intelligent systems work and solve problems.
+</p>
+</div>
+
+<div class="card">
+<h2>Machine Learning</h2>
+<p>
+Train computers to learn from data and make predictions.
+</p>
+</div>
+
+<div class="card">
+<h2>Data Science</h2>
+<p>
+Analyze data and discover useful information.
+</p>
+</div>
+
+<div class="card">
+<h2>Prompt Engineering</h2>
+<p>
+Learn how to work effectively with AI tools.
+</p>
+</div>
+
+</div>
+
+<!-- CERTIFICATES -->
+
+<h2 class="section-title">
+Certificates Provided
+</h2>
+
+<div class="container">
+
+<div class="card">
+<h2>Python Certificate</h2>
+<p>Certificate after successful completion.</p>
+</div>
+
+<div class="card">
+<h2>Java Certificate</h2>
+<p>Industry-oriented training certificate.</p>
+</div>
+
+<div class="card">
+<h2>Web Development Certificate</h2>
+<p>Project-based certification.</p>
+</div>
+
+<div class="card">
+<h2>Hardware & Networking Certificate</h2>
+<p>Practical training completion certificate.</p>
+</div>
+
+</div>
+<!-- STUDENT SUCCESS SECTION -->
+
+<h2 class="section-title">
+🌟 Student Success & Achievements
+</h2>
+
+<div class="container">
+
+<div class="card success-card">
+<h1>1000+</h1>
+<h3>Students Trained</h3>
+<p>
+Successfully completed different computer courses.
+</p>
+</div>
+
+
+<div class="card success-card">
+<h1>25+</h1>
+<h3>Professional Courses</h3>
+<p>
+Python, Java, Web Development, AI and more.
+</p>
+</div>
+
+
+<div class="card success-card">
+<h1>95%</h1>
+<h3>Student Satisfaction</h3>
+<p>
+Practical learning with excellent guidance.
+</p>
+</div>
+
+
+<div class="card success-card">
+<h1>500+</h1>
+<h3>Projects Completed</h3>
+<p>
+Students created websites, software and applications.
+</p>
+</div>
+
+</div>
+<!-- GALLERY SECTION -->
+
+<h2 class="section-title" id="gallery">
+Gallery
+</h2>
+
+<div class="container">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600"
+width="100%">
+<h3>Programming Lab</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600"
+width="100%">
+<h3>Web Development Class</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600"
+width="100%">
+<h3>Computer Training</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600"
+width="100%">
+<h3>Student Activities</h3>
+</div>
+
+</div>
+
+<!-- TESTIMONIALS -->
+
+<h2 class="section-title">
+Student Testimonials
+</h2>
+
+<div class="container">
+
+<div class="card">
+<h3>★★★★★</h3>
+<p>
+Best institute for learning Python and Web Development.
+</p>
+</div>
+
+<div class="card">
+<h3>★★★★★</h3>
+<p>
+Very good practical training and lab facilities.
+</p>
+</div>
+
+<div class="card">
+<h3>★★★★★</h3>
+<p>
+Friendly faculty and career guidance support.
+</p>
+</div>
+
+</div>
+
+<!-- ADMISSION FORM -->
+
+<h2 class="section-title">
+Online Admission Form
+</h2>
+
+<div class="container">
+
+<div class="card" style="width:700px;">
+
+<form onsubmit="admissionSuccess();return false;">
+
+<input id="studentName" type="text" placeholder="Student Name" required>
+
+<input id="studentEmail" type="email" placeholder="Email Address" required>
+
+<input id="studentPhone" type="tel" placeholder="Phone Number" required>
+
+<input id="fatherName" type="text" placeholder="Father Name">
+<select
+style="width:100%;padding:12px;margin:10px;">
+
+<option>Python Programming</option>
+<option>Java Programming</option>
+<option>HTML & CSS</option>
+<option>Web Development</option>
+<option>Hardware & Networking</option>
+
+</select>
+
+<button type="button" onclick="sendAdmission()"
+style="padding:12px 25px;background:#003366;color:white;border:none;border-radius:8px;">
+Apply Now
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- EmailJS Library -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("YOUR_PUBLIC_KEY");
+</script>
+
+<script>
+document.getElementById("admissionForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+emailjs.sendForm(
+"YOUR_SERVICE_ID",
+"YOUR_TEMPLATE_ID",
+this
+)
+.then(function(){
+
+alert("✅ Admission Submitted Successfully!");
+
+})
+.catch(function(error){
+
+alert("❌ Error: " + error);
+
+});
+
+});
+</script>
+<!-- CONTACT FORM -->
+
+<h2 class="section-title" id="contact">
+Contact Us
+</h2>
+
+<div class="container">
+
+<div class="card" style="width:700px;">
+
+<form onsubmit="contactSuccess();return false;">
+
+<input type="text"
+placeholder="Your Name"
+required
+style="width:100%;padding:12px;margin:10px;">
+
+<input type="email"
+placeholder="Your Email"
+required
+style="width:100%;padding:12px;margin:10px;">
+
+<textarea
+placeholder="Your Message"
+required
+style="width:100%;padding:12px;margin:10px;height:120px;"></textarea>
+
+<button
+style="padding:12px 25px;background:#003366;color:white;border:none;border-radius:8px;">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- ENQUIRY FORM -->
+
+<h2 class="section-title">
+📋 Course Enquiry Form
+</h2>
+
+<div class="container">
+
+<div class="card">
+
+<input id="enqName" type="text"
+placeholder="Student Name" required>
+
+<input id="enqFather" type="text"
+placeholder="Father Name" required>
+
+<input id="enqPhone" type="tel"
+placeholder="Phone Number" required>
+
+<input id="enqClass" type="text"
+placeholder="Class (Example: 8th, 10th, Inter, Degree)" required>
+
+
+<label><b>Select Course:</b></label>
+
+<select id="enqCourse" required>
+
+<option value="">Choose Course</option>
+
+<option>C Programming</option>
+
+<option>C++ Programming</option>
+
+<option>Java Programming</option>
+
+<option>Python Programming</option>
+
+<option>HTML</option>
+
+<option>CSS</option>
+
+<option>Artificial Intelligence (AI)</option>
+
+<option>Web Development</option>
+
+</select>
+
+<br><br>
+
+
+<label><b>Choose Type of Class:</b></label>
+
+<select id="enqType" required>
+
+<option value="">Select Class Type</option>
+
+<option>Online</option>
+
+<option>Offline (Physical Classroom)</option>
+
+<option>Both Online & Offline</option>
+
+</select>
+
+<br><br>
+
+
+<button type="button" onclick="sendEnquiry()">
+📩 Submit Enquiry
+</button>
+
+</div>
+
+</div>
+
+<!-- LIVE CLOCK -->
+
+<h2 class="section-title">
+Current Date & Time
+</h2>
+
+<div class="container">
+
+<div class="card">
+<h2 id="clock"></h2>
+</div>
+
+</div>
+
+<!-- GOOGLE MAP -->
+
+<h2 class="section-title">
+Location
+</h2>
+
+<center>
+
+<iframe
+src="https://maps.google.com/maps?q=Papaiahpet%20Chaman%20Warangal&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="90%"
+height="450"
+style="border-radius:15px;border:none;">
+</iframe>
+
+</center>
+<center>
+
+<a href="brochure.pdf" download>
+
+<button style="
+padding:15px 30px;
+background:#003366;
+color:white;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;">
+
+📄 Download Course Brochure
+
+</button>
+
+</a>
+
+</center>
+
+<br><br>
+<!-- CALL BUTTON -->
+
+<a href="tel:+919603312393"
+style="
+position:fixed;
+bottom:20px;
+right:150px;
+background:#007BFF;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+z-index:9999;
+box-shadow:0px 4px 10px rgba(0,0,0,0.3);">
+📞 Call Now
+</a>
+
+<!-- WHATSAPP BUTTON -->
+
+<a href="https://wa.me/919603312393"
+style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+z-index:9999;">
+WhatsApp
+</a>
+<!-- Scroll To Top Button -->
+
+<button onclick="topFunction()" id="topBtn">
+⬆
+</button>
+<!-- DARK MODE BUTTON -->
+
+<button onclick="darkMode()"
+style="
+position:fixed;
+bottom:90px;
+right:20px;
+padding:12px;
+border:none;
+border-radius:50px;
+cursor:pointer;">
+🌙 Dark Mode
+</button>
+
+<!-- FOOTER -->
+
+<footer
+style="
+margin-top:50px;
+background:#003366;
+padding:30px;
+text-align:center;">
+
+<h2>School & and Intermediate class</h2>
+
+<br>
+
+<p>
+📍 Papaiahpet Chaman, Warangal
+</p>
+
+<br>
+
+<h3>
+Director: Afsar Hussain
+</h3>
+
+<p>
+📞 +91 9603312393
+</p>
+
+<br>
+
+<p>
+© 2026 School & and Intermediate class
+</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function admissionSuccess(){
+alert("Admission Form Submitted Successfully!");
+}
+
+function contactSuccess(){
+alert("Thank You! Your Message Has Been Received.");
+}
+
+setInterval(function(){
+
+document.getElementById("clock").innerHTML =
+new Date().toLocaleString();
+
+},1000);
+
+function darkMode(){
+
+document.body.classList.toggle("dark");
+
+}
+
+</script>
+
+<style>
+
+.dark{
+background:black !important;
+color:white !important;
+color:#25D366 !important;
+}
+
+</style>
+
+<script>
+
+setTimeout(()=>{
+alert("Admissions Open!");
+},3000);
+
+</script>
+
+<script>
+function sendAdmission(){
+
+let name = document.getElementById("studentName").value;
+let email = document.getElementById("studentEmail").value;
+let phone = document.getElementById("studentPhone").value;
+let father = document.getElementById("fatherName").value;
+
+let message =
+"🎓 ADMISSION APPLICATION\n\n" +
+"Student Name: " + name + "\n" +
+"Email: " + email + "\n" +
+"Phone: " + phone + "\n\n" +
+"Father: " + father + "\n"+
+"Director: Afsar Hussain\n" +
+"Contact: +91 9603312393";
+
+window.open(
+"https://wa.me/919603312393?text=" +
+encodeURIComponent(message),
+"_blank"
+);
+
+}
+</script>
+
+<div id="welcomeBox">
+🎉 Welcome to School & and Intermediate class<br>
+Admissions Open 2026-27
+</div>
+
+setTimeout(function(){
+document.getElementById("welcomeBox").style.display="none";
+},5000);
+<script>
+    let count = 0;
+
+let counter = setInterval(function(){
+
+count++;
+
+document.getElementById("students").innerHTML = count + "+";
+
+if(count == 1000){
+clearInterval(counter);
+}
+
+},10);
+</script>
+<script>
+window.onscroll = function(){
+
+if(document.documentElement.scrollTop > 300){
+
+document.getElementById("topBtn").style.display = "block";
+
+}
+
+else{
+
+document.getElementById("topBtn").style.display = "none";
+
+}
+
+};
+
+
+function topFunction(){
+
+document.body.scrollTop = 0;
+
+document.documentElement.scrollTop = 0;
+
+}
+</script>
+<!-- Floating Call Button -->
+
+<a href="tel:+919603312393" class="floating-call">
+    📞
+</a>
+<script>
+
+function sendEnquiry(){
+
+let name = document.getElementById("enqName").value;
+let father = document.getElementById("enqFather").value;
+let phone = document.getElementById("enqPhone").value;
+let studentClass = document.getElementById("enqClass").value;
+let course = document.getElementById("enqCourse").value;
+let type = document.getElementById("enqType").value;
+
+
+let message =
+"📋 NEW COURSE ENQUIRY\n\n" +
+"Student Name: " + name + "\n" +
+"Father Name: " + father + "\n" +
+"Phone Number: " + phone + "\n" +
+"Class: " + studentClass + "\n" +
+"Course: " + course + "\n" +
+"Class Type: " + type + "\n\n" +
+"Please provide more information about the course.";
+
+
+let whatsappURL =
+"https://wa.me/919603312393?text=" +
+encodeURIComponent(message);
+
+
+window.open(whatsappURL, "_blank");
+
+}
+
+</script>
+<script>
+
+function joinCourse(course){
+
+let message =
+"🎓 Firmware Institute of Learning\n\n" +
+"I want to join the course:\n\n" +
+"💻 Course: " + course + "\n\n" +
+"Please send me details about admission, fees and class timings.";
+
+let url =
+"https://wa.me/919603312393?text=" +
+encodeURIComponent(message);
+
+window.open(url, "_blank");
+
+}
+
+</script>
+<!-- Premium Admission Popup -->
+
+<div id="admissionPopup" class="popup">
+
+<div class="popup-box">
+
+<span class="close" onclick="closeForm()">
+❌
+</span>
+
+<h2>
+🎓 Course Admission
+</h2>
+
+<input type="text" id="studentName"
+placeholder="Student Name" required>
+
+<input type="text" id="fatherName"
+placeholder="Father Name" required>
+
+<input type="tel" id="phone"
+placeholder="Phone Number" required>
+
+
+<input type="text" id="courseName"
+readonly>
+
+
+<input type="text" id="studentClass"
+placeholder="Class (Example: 10th, Inter, Degree)">
+
+
+<select id="syllabus">
+
+<option>
+Select Syllabus
+</option>
+
+<option>
+State (SCERT)
+</option>
+
+<option>
+CBSE (NCERT)
+</option>
+
+</select>
+
+
+<select id="classType">
+
+<option>
+Choose Class Type
+</option>
+
+<option>
+Online
+</option>
+
+<option>
+Offline (Physical)
+</option>
+
+<option>
+Both Online & Offline
+</option>
+
+</select>
+
+
+<button onclick="sendAdmission()">
+📩 Submit Admission
+</button>
+
+</div>
+
+</div>
+<script>
+
+function openForm(course){
+
+document.getElementById("admissionPopup")
+.style.display = "flex";
+
+document.getElementById("courseName")
+.value = course;
+
+}
+
+
+function closeForm(){
+
+document.getElementById("admissionPopup")
+.style.display = "none";
+
+}
+
+
+function sendAdmission(){
+
+let message =
+"🎓 NEW ADMISSION REQUEST\n\n" +
+
+"Student Name: " +
+document.getElementById("studentName").value + "\n" +
+
+"Father Name: " +
+document.getElementById("fatherName").value + "\n" +
+
+"Phone Number: " +
+document.getElementById("phone").value + "\n" +
+
+"Course: " +
+document.getElementById("courseName").value + "\n" +
+
+"Class: " +
+document.getElementById("studentClass").value + "\n" +
+
+"Syllabus: " +
+document.getElementById("syllabus").value + "\n" +
+
+"Class Type: " +
+document.getElementById("classType").value;
+
+
+let url =
+"https://wa.me/919603312393?text=" +
+encodeURIComponent(message);
+
+
+window.open(url,"_blank");
+
+closeForm();
+
+}
+
+</script>
+<script>
+
+const cards = document.querySelectorAll(".course-card");
+
+
+cards.forEach(card => {
+
+card.addEventListener("mousemove", (e) => {
+
+const rect = card.getBoundingClientRect();
+
+const x = e.clientX - rect.left;
+const y = e.clientY - rect.top;
+
+const rotateX = -(y - rect.height / 2) / 10;
+const rotateY = (x - rect.width / 2) / 10;
+
+
+card.style.transform =
+`perspective(1000px)
+ rotateX(${rotateX}deg)
+ rotateY(${rotateY}deg)
+ scale(1.05)`;
+
+});
+
+
+card.addEventListener("mouseleave", () => {
+
+card.style.transform =
+"perspective(1000px) rotateX(0) rotateY(0) scale(1)";
+
+});
+
+});
+
+</script>
+<script>
+
+// Select cursor
+const cursor = document.querySelector(".cursor");
+
+
+// Follow mouse
+document.addEventListener("mousemove", (e)=>{
+
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+
+});
+
+
+// Click animation
+document.addEventListener("mousedown", ()=>{
+
+    cursor.classList.add("click");
+
+});
+
+
+document.addEventListener("mouseup", ()=>{
+
+    cursor.classList.remove("click");
+
+});
+
+</script>
+<script>
+
+/* Animated Counter */
+
+let counters =
+document.querySelectorAll(".counter");
+
+
+counters.forEach(counter=>{
+
+let update=()=>{
+
+let target =
++counter.getAttribute("data-target");
+
+let count =
++counter.innerText;
+
+
+let speed = target/100;
+
+
+if(count < target){
+
+counter.innerText =
+Math.ceil(count + speed);
+
+setTimeout(update,30);
+
+}
+
+else{
+
+counter.innerText =
+target;
+
+}
+
+}
+
+
+update();
+
+});
+
+</script>
+<!-- AI Assistant Button -->
+
+<div class="ai-button" onclick="openAI()">
+    🤖
+</div>
+
+
+<!-- AI Chat Box -->
+
+<div class="ai-chat" id="aiChat">
+
+<div class="ai-header">
+
+<h2>FIT AI Assistant</h2>
+
+<button onclick="closeAI()">✖</button>
+
+</div>
+
+
+<div class="chat-body" id="chatBody">
+
+<div class="message bot">
+Hello 👋 Welcome to Firmware Institute of Technology.
+Ask me about courses, fees, timings or admissions.
+</div>
+
+</div>
+
+
+<div class="chat-input">
+
+<input 
+type="text" 
+id="userInput"
+placeholder="Ask something...">
+
+
+<button onclick="sendMessage()">Send</button>
+
+<button onclick="startVoice()">🎤</button>
+
+</div>
+
+</div>
+
+
+<!-- Theme Button -->
+
+<button class="theme-btn" onclick="changeTheme()">
+🌙
+</button>
+
+
+<!-- Digital Clock -->
+
+<div class="clock" id="clock">
+00:00:00
+</div>
+<script>
+
+
+/* Open & Close Chat */
+
+function openAI(){
+
+document.getElementById("aiChat")
+.style.display="flex";
+
+}
+
+
+function closeAI(){
+
+document.getElementById("aiChat")
+.style.display="none";
+
+}
+
+
+/* Send Message */
+
+function sendMessage(){
+
+let input =
+document.getElementById("userInput");
+
+let text=input.value;
+
+if(text=="") return;
+
+
+let body =
+document.getElementById("chatBody");
+
+
+body.innerHTML +=
+`<div class="message user">${text}</div>`;
+
+
+let reply =
+"Please contact our institute for complete details.";
+
+if(text.toLowerCase().includes("course")){
+
+reply =
+"We offer Python, Java, Web Development, AI, Hardware & 20+ courses.";
+
+}
+
+else if(text.toLowerCase().includes("fee")){
+
+reply =
+"Fees depend on the selected course. Please contact our office.";
+
+}
+
+else if(text.toLowerCase().includes("time")){
+
+reply =
+"Online and Offline batches are available from morning to evening.";
+
+}
+
+
+body.innerHTML +=
+`<div class="message bot">${reply}</div>`;
+
+
+input.value="";
+
+body.scrollTop=body.scrollHeight;
+
+}
+
+
+
+/* Voice Assistant */
+
+function startVoice(){
+
+let speech =
+new webkitSpeechRecognition();
+
+
+speech.onresult = function(e){
+
+document.getElementById("userInput")
+.value = e.results[0][0].transcript;
+
+sendMessage();
+
+}
+
+
+speech.start();
+
+}
+
+
+
+/* Dark Light Mode */
+
+function changeTheme(){
+
+document.body.classList.toggle("light-mode");
+
+}
+
+
+/* Live Clock */
+
+setInterval(()=>{
+
+let date=new Date();
+
+document.getElementById("clock")
+.innerHTML =
+date.toLocaleTimeString();
+
+},1000);
+
+
+</script>
+
+<script>
+setInterval(()=>{
+let date = new Date();
+document.getElementById("clock").innerHTML =
+date.toLocaleTimeString();
+},1000);
+</script>
+<script>
+
+/* Online Exam */
+
+function checkExam(){
+
+let score = 0;
+
+
+let answers = document.querySelectorAll(
+'input[type="radio"]:checked'
+);
+
+
+answers.forEach(answer => {
+
+score += Number(answer.value);
+
+});
+
+
+let message = "";
+
+
+if(score >= 3){
+
+message =
+"🏆 Congratulations! You Passed with " + score + "/3 marks.";
+
+}
+
+else{
+
+message =
+"❌ You Failed. Your Score is " + score + "/3 marks.";
+
+}
+
+
+document.getElementById("result")
+.innerHTML = message;
+
+}
+
+</script>
+<script>
+
+
+function uploadAssignment(){
+
+let file =
+document.getElementById("assignment")
+.files[0];
+
+
+if(!file){
+
+alert(
+"Please select a file");
+
+return;
+
+}
+
+
+document.getElementById(
+"uploadMessage")
+.innerHTML =
+"✅ Assignment uploaded successfully: " + file.name;
+
+
+}
+
+
+</script>
+<script>
+
+
+/* AI Teacher */
+
+function askTeacher(){
+
+let q =
+document.getElementById("question")
+.value.toLowerCase();
+
+let answer =
+"Please ask about programming courses.";
+
+
+if(q.includes("html")){
+
+answer =
+"HTML is used to create the structure of web pages.";
+
+}
+
+
+else if(q.includes("css")){
+
+answer =
+"CSS is used to design and style websites.";
+
+}
+
+
+else if(q.includes("javascript")){
+
+answer =
+"JavaScript makes websites interactive and dynamic.";
+
+}
+
+
+else if(q.includes("python")){
+
+answer =
+"Python is a powerful language used for AI, apps, and automation.";
+
+}
+
+
+document.getElementById("aiAnswer")
+.innerHTML = answer;
+
+}
+
+
+
+/* Coding Compiler */
+
+function runCode(){
+
+let code =
+document.getElementById("codeArea")
+.value;
+
+
+document.getElementById("output")
+.srcdoc = code;
+
+}
+
+
+
+/* Student Chat */
+
+function sendChat(){
+
+let input =
+document.getElementById("chatInput");
+
+
+if(input.value == "")
+return;
+
+
+let box =
+document.getElementById("chatBox");
+
+
+box.innerHTML +=
+"<div class='message'>"
++ input.value +
+"</div>";
+
+
+input.value="";
+
+
+box.scrollTop =
+box.scrollHeight;
+
+}
+
+
+</script>
+<script>
+
+function downloadCertificate(){
+
+let certificate = `
+--------------------------------
+FIRMWARE INSTITUTE OF TECHNOLOGY
+
+Course Completion Certificate
+
+This is to certify that
+
+STUDENT NAME
+
+has successfully completed the course.
+
+Congratulations!
+
+--------------------------------
+`;
+
+let file = new Blob([certificate],
+{type:"text/plain"});
+
+let link =
+document.createElement("a");
+
+link.href =
+URL.createObjectURL(file);
+
+link.download =
+"FIT-Certificate.txt";
+
+link.click();
+
+}
+
+</script>
+
+</body>
+</html>

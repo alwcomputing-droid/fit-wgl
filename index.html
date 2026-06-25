@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Firmware Institute of Technology</title>
+
+<style>
+
+    .logo-container{
+    display:flex;
+    align-items:center;
+}
+
+/* FIT Logo with Transparent Background */
+
+.logo-container{
+    display:flex;
+    align-items:center;
+}
+
+.logo-container img{
+    height:80px;
+    width:auto;
+    display:block;
+    background: transparent;
+    mix-blend-mode: screen;
+    filter: drop-shadow(0 0 15px cyan);
+    animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-6px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoFloat {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-6px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+    /* FIT Logo */
+
+.logo-container img{
+
+height:100px;
+width:auto;
+
+transition:0.5s;
+
+filter:
+drop-shadow(0 0 15px #00ffff);
+
+animation:
+logoFloat 3s infinite ease-in-out;
+
+}
+
+
+.logo-container img:hover{
+
+transform:
+scale(1.08)
+rotate(2deg);
+
+filter:
+drop-shadow(0 0 25px #FFD700);
+
+}
+
+
+/* Floating animation */
+
+@keyframes logoFloat{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+     *{
+        margin:0;
+        padding:0;
+    }
+
+    body{
+        background:black;
+    }
+/* Logo section */
+    .logo{
+        animation:glow 2s infinite alternate;
+    }
+    /* Animated Background */
+
+body{
+    background: linear-gradient(
+    45deg,
+    #020024,
+    #090979,
+    #00d4ff,
+    #8a2be2);
+    
+    background-size:400% 400%;
+    animation:gradientMove 10s ease infinite;
+}
+
+
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle,#1e3a8a,#050816);
+    z-index:-1;
+    animation:bgMove 10s infinite alternate;
+}
+
+@keyframes bgMove{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.2);
+    }
+}
+
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+height:110px;
+padding:0 50px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:
+rgba(0,0,30,0.85);
+
+backdrop-filter:blur(10px);
+
+z-index:1000;
+}
+
+
+/* Hero */
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+
+.hero h1{
+    font-size:65px;
+    color:#FFD700;
+    text-shadow:0 0 30px gold;
+}
+
+
+.hero p{
+    margin:25px 0;
+    font-size:25px;
+}
+
+
+.hero .btn{
+    background:#00ffff;
+    color:black;
+    padding:15px 35px;
+    text-decoration:none;
+    border-radius:40px;
+    font-size:20px;
+    font-weight:bold;
+    transition:.4s;
+}
+
+
+.hero .btn:hover{
+    box-shadow:0 0 25px cyan;
+    transform:scale(1.1);
+}
+
+
+/* Floating Animation */
+
+.float{
+    animation:float 3s infinite;
+}
+
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+
+/* Section Title */
+
+.title{
+    text-align:center;
+    font-size:45px;
+    color:#FFD700;
+    margin:50px;
+}
+/* Premium Animated Button */
+
+button{
+    position:relative;
+    overflow:hidden;
+    background:#FFD700;
+    color:black;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 25px #FFD700;
+}
+
+
+/* Light Moving Effect */
+
+button::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+    height:300%;
+
+    background:
+    rgba(255,255,255,0.5);
+
+    transform:
+    rotate(45deg);
+
+    top:-100%;
+    left:-100%;
+
+    transition:0.6s;
+}
+
+
+button:hover::before{
+
+    width:120%;
+    left:100%;
+
+}
+/* Typing Animation */
+
+.typing {
+
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid cyan;
+    color: #FFD700;
+    margin: auto;
+
+    animation:
+    typing 4s steps(30) forwards,
+    blink 0.7s infinite;
+}
+
+
+@keyframes typing {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+
+
+@keyframes blink {
+
+    50% {
+        border-color: transparent;
+    }
+
+}
+/* Premium Loading Screen */
+
+#loader {
+
+position: fixed;
+
+top: 0;
+left: 0;
+
+width: 100%;
+height: 100%;
+
+background: black;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+z-index: 99999;
+
+animation: fadeBackground 2s ease;
+}
+
+
+/* Loading Text */
+
+.loader-text {
+
+font-size: 35px;
+
+color: #FFD700;
+
+font-weight: bold;
+
+text-align: center;
+
+animation: glowPulse 1.2s infinite;
+
+}
+
+
+@keyframes glowPulse {
+
+0% {
+transform: scale(1);
+text-shadow: 0 0 10px gold;
+}
+
+50% {
+transform: scale(1.15);
+text-shadow:
+0 0 30px gold,
+0 0 60px orange;
+}
+
+100% {
+transform: scale(1);
+text-shadow: 0 0 10px gold;
+}
+
+}
+/* Scroll Reveal Animation */
+
+.hidden {
+
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+
+}
+
+
+.show {
+
+    opacity: 1;
+    transform: translateY(0);
+
+}
+/* Galaxy Particle Background */
+
+.particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+
+.particles span {
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 10px cyan,
+        0 0 20px cyan,
+        0 0 40px blue;
+    animation: moveStars 15s linear infinite;
+}
+
+
+/* Different particle positions */
+
+.particles span:nth-child(1){
+    left:10%;
+    animation-duration:12s;
+}
+
+.particles span:nth-child(2){
+    left:20%;
+    animation-duration:18s;
+}
+
+.particles span:nth-child(3){
+    left:30%;
+    animation-duration:10s;
+}
+
+.particles span:nth-child(4){
+    left:40%;
+    animation-duration:20s;
+}
+
+.particles span:nth-child(5){
+    left:50%;
+    animation-duration:15s;
+}
+
+.particles span:nth-child(6){
+    left:60%;
+    animation-duration:17s;
+}
+
+.particles span:nth-child(7){
+    left:70%;
+    animation-duration:13s;
+}
+
+.particles span:nth-child(8){
+    left:80%;
+    animation-duration:16s;
+}
+
+.particles span:nth-child(9){
+    left:90%;
+    animation-duration:14s;
+}
+
+.particles span:nth-child(10){
+    left:95%;
+    animation-duration:19s;
+}
+
+
+/* Floating movement */
+
+@keyframes moveStars {
+
+0% {
+    transform: translateY(100vh);
+    opacity:0;
+}
+
+20% {
+    opacity:1;
+}
+
+80% {
+    opacity:1;
+}
+
+100% {
+    transform: translateY(-100vh);
+    opacity:0;
+}
+
+}
+/* Premium Slider */
+
+.slider{
+position:relative;
+width:90%;
+height:500px;
+margin:60px auto;
+overflow:hidden;
+border-radius:30px;
+box-shadow:0 0 35px cyan;
+}
+
+
+.slides{
+width:100%;
+height:100%;
+}
+
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+opacity:0;
+transition:1s;
+}
+
+
+.slide.active{
+opacity:1;
+}
+
+
+.slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+
+.caption{
+position:absolute;
+bottom:50px;
+left:50px;
+background:rgba(0,0,0,0.6);
+padding:25px;
+border-radius:20px;
+color:white;
+max-width:450px;
+}
+
+
+.caption h1{
+font-size:40px;
+color:#FFD700;
+}
+
+
+.caption p{
+font-size:18px;
+}
+
+
+/* Buttons */
+
+.prev,
+.next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:rgba(0,255,255,0.6);
+color:white;
+font-size:30px;
+cursor:pointer;
+z-index:100;
+}
+
+
+.prev{
+left:20px;
+}
+
+
+.next{
+right:20px;
+}
+
+
+.prev:hover,
+.next:hover{
+background:#FFD700;
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.slider{
+height:300px;
+}
+
+.caption{
+left:15px;
+right:15px;
+bottom:20px;
+max-width:90%;
+}
+
+.caption h1{
+font-size:25px;
+}
+
+.caption p{
+font-size:14px;
+}
+
+}
+</style>
+
+</head>
+
+
+<body>
+<!-- Galaxy Particles -->
+<div class="particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<!-- Premium Loading Screen -->
+
+<div id="loader">
+
+<div class="loader-text">
+FIRMWARE INSTITUTE OF TECHNOLOGY
+</div>
+
+</div>
+
+
+<!-- Navigation -->
+
+<nav>
+
+<div class="logo-container">
+    <img src="fit-logo.png" alt="FIT Logo">
+</div>
+
+
+<ul>
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#academy">
+Academies
+</a>
+</li>
+
+<li>
+<a href="#admission">
+Admission
+</a>
+</li>
+
+<li>
+<a href="#contact">
+Contact
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+<!-- Hero Section -->
+
+<section class="hero" id="home">
+
+<div class="float">
+
+<h1 class="typing">
+    Firmware Institute of Technology
+</h1>
+
+<p>
+Empowering Students With Knowledge,
+Technology & Innovation
+</p>
+
+
+<a href="#academy" class="btn">
+Explore Academies
+</a>
+
+
+</div>
+
+</section>
+<!-- Premium Image Slider -->
+
+<section class="slider">
+
+<div class="slides">
+
+<div class="slide active">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600">
+<div class="caption">
+<h1>Modern Computer Labs</h1>
+<p>Learn with latest technology & practical sessions</p>
+</div>
+</div>
+
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1600">
+<div class="caption">
+<h1>Expert Faculty</h1>
+<p>Professional teachers guiding your future</p>
+</div>
+</div>
+
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600">
+<div class="caption">
+<h1>Programming & AI</h1>
+<p>Build your career with future technologies</p>
+</div>
+</div>
+
+</div>
+
+
+<button class="prev" onclick="changeSlide(-1)">
+❮
+</button>
+
+<button class="next" onclick="changeSlide(1)">
+❯
+</button>
+
+</section>
+
+<h2 class="title">
+🏫 Our Learning Academies
+</h2>
+<!-- Academy Section -->
+
+<style>
+
+.academy-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+    padding:50px;
+}
+
+
+/* Glass Cards */
+
+.academy-card{
+    width:380px;
+    min-height:500px;
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.3);
+    border-radius:25px;
+    backdrop-filter:blur(15px);
+    padding:35px;
+    text-align:center;
+    box-shadow:0 0 25px rgba(0,255,255,0.4);
+    transition:0.5s;
+}
+
+
+.academy-card:hover{
+    transform:translateY(-20px) scale(1.05);
+    box-shadow:0 0 45px cyan;
+}
+
+
+/* Icons */
+
+.icon{
+    font-size:80px;
+}
+
+
+/* Titles */
+
+.academy-card h2{
+    margin:20px 0;
+    color:#FFD700;
+    font-size:30px;
+}
+
+
+/* Text */
+
+.academy-card p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+
+/* Buttons */
+
+.open-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 35px;
+    background:#00ffff;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:40px;
+    transition:0.3s;
+}
+
+
+.open-btn:hover{
+    transform:scale(1.1);
+    background:#FFD700;
+}
+
+
+/* Statistics */
+
+.stats{
+    margin-top:70px;
+    padding:70px 20px;
+    background:rgba(0,0,0,0.5);
+}
+
+
+.stats-box{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+
+.stat{
+    width:220px;
+    background:rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+}
+
+
+.stat:hover{
+    transform:translateY(-15px);
+}
+
+
+.stat h1{
+    font-size:45px;
+    color:#00ffff;
+}
+
+
+.stat h3{
+    margin-top:10px;
+}
+
+</style>
+
+
+
+<section id="academy">
+
+
+<div class="academy-container">
+
+
+<!-- Computer Academy -->
+
+<div class="academy-card">
+
+<div class="icon">
+💻
+</div>
+
+
+<h2>
+Computer & Technology Academy
+</h2>
+
+
+<p>
+
+Python Programming<br>
+C & C++<br>
+Java Programming<br>
+HTML, CSS, JavaScript<br>
+Web Development<br>
+Artificial Intelligence<br>
+Hardware & Networking
+
+</p>
+
+
+<a href="computer.html" class="open-btn">
+
+Enter Computer Academy
+
+</a>
+
+
+</div>
+
+
+
+<!-- School Academy -->
+
+<div class="academy-card">
+
+
+<div class="icon">
+📚
+</div>
+
+
+<h2>
+School & Mathematics Academy
+</h2>
+
+
+<p>
+
+Classes 1st to 10th<br>
+Intermediate Classes<br>
+State (SCERT)<br>
+CBSE (NCERT)<br>
+Online Classes<br>
+Offline Classes
+
+</p>
+
+
+<a href="maths.html" class="open-btn">
+
+Enter School Academy
+
+</a>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- Statistics -->
+
+<section class="stats">
+
+
+<h2 class="title">
+
+🌟 Our Achievements
+
+</h2>
+
+
+<div class="stats-box">
+
+
+<div class="stat">
+
+<h1 id="students">
+0
+</h1>
+
+<h3>
+Students Trained
+</h3>
+
+</div>
+
+
+<div class="stat">
+
+<h1 id="courses">
+0
+</h1>
+
+<h3>
+Professional Courses
+</h3>
+
+</div>
+
+
+<div class="stat">
+
+<h1 id="teachers">
+0
+</h1>
+
+<h3>
+Expert Teachers
+</h3>
+
+</div>
+
+
+<div class="stat">
+
+<h1 id="success">
+0
+</h1>
+
+<h3>
+Success Rate %
+</h3>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<script>
+
+
+function counter(id, target, speed){
+
+let count = 0;
+
+let x = setInterval(function(){
+
+count++;
+
+document.getElementById(id).innerHTML = count + "+";
+
+
+if(count >= target){
+
+clearInterval(x);
+
+}
+
+}, speed);
+
+}
+
+
+counter("students", 500, 1);
+
+counter("courses", 15, 40);
+
+counter("teachers", 10, 60);
+
+counter("success", 100, 40);
+
+
+</script>
+<style>
+
+/* Admission Section */
+
+.admission{
+    padding:70px 10%;
+    text-align:center;
+}
+
+.form-box{
+    max-width:700px;
+    margin:auto;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 0 25px cyan;
+}
+
+
+.form-box input,
+.form-box select{
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+}
+
+
+.form-box button{
+    background:#00ffff;
+    color:black;
+    padding:15px 40px;
+    border:none;
+    border-radius:35px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+
+.form-box button:hover{
+    background:#FFD700;
+    transform:scale(1.1);
+}
+
+
+/* Success Cards */
+
+.success-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:40px;
+}
+
+
+.success-card{
+    width:250px;
+    background:rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 20px cyan;
+    transition:0.5s;
+}
+
+
+.success-card:hover{
+    transform:translateY(-15px);
+}
+
+
+.success-card h1{
+    color:#FFD700;
+    font-size:45px;
+}
+
+
+/* Gallery */
+
+.gallery{
+    padding:60px 8%;
+    text-align:center;
+}
+
+
+.gallery-box{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+
+.gallery-box img{
+    width:300px;
+    height:200px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:0.5s;
+    box-shadow:0 0 15px black;
+}
+
+
+.gallery-box img:hover{
+    transform:scale(1.08);
+}
+
+</style>
+
+
+<!-- Admission -->
+
+<section class="admission" id="admission">
+
+<h2 class="title">
+📝 Quick Admission Form
+</h2>
+
+
+<div class="form-box">
+
+
+<input type="text" id="name"
+placeholder="Student Name" required>
+
+
+<input type="text" id="father"
+placeholder="Father Name" required>
+
+
+<input type="tel" id="phone"
+placeholder="Phone Number" required>
+
+
+<select id="course">
+
+<option>Select Course</option>
+
+<option>Computer Courses</option>
+
+<option>School Classes</option>
+
+<option>Mathematics</option>
+
+</select>
+
+
+<select id="type">
+
+<option>Choose Class Type</option>
+
+<option>Online</option>
+
+<option>Offline</option>
+
+<option>Both Online & Offline</option>
+
+</select>
+
+
+<button onclick="sendAdmission()">
+📩 Send Admission on WhatsApp
+</button>
+
+
+</div>
+
+</section>
+
+
+<!-- Student Success -->
+
+<section>
+
+<h2 class="title">
+🏆 Student Achievements
+</h2>
+
+
+<div class="success-container">
+
+
+<div class="success-card">
+<h1>10000+</h1>
+<h3>Students Guided</h3>
+</div>
+
+
+<div class="success-card">
+<h1>500+</h1>
+<h3>Projects Completed</h3>
+</div>
+
+
+<div class="success-card">
+<h1>98%</h1>
+<h3>Success Rate</h3>
+</div>
+
+
+<div class="success-card">
+<h1>50+</h1>
+<h3>Expert Faculty</h3>
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- Gallery -->
+
+<section class="gallery">
+
+<h2 class="title">
+📸 Our Learning Environment
+</h2>
+
+
+<div class="gallery-box">
+
+
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600">
+
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600">
+
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600">
+
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600">
+
+
+</div>
+
+</section>
+
+
+
+<script>
+
+function sendAdmission(){
+
+let message =
+"🎓 Firmware Institute of Technology Admission\n\n" +
+
+"Student Name: " +
+document.getElementById("name").value + "\n" +
+
+"Father Name: " +
+document.getElementById("father").value + "\n" +
+
+"Phone Number: " +
+document.getElementById("phone").value + "\n" +
+
+"Course: " +
+document.getElementById("course").value + "\n" +
+
+"Class Type: " +
+document.getElementById("type").value;
+
+
+let url =
+"https://wa.me/919603312393?text=" +
+encodeURIComponent(message);
+
+
+window.open(url,"_blank");
+
+}
+
+</script>
+<style>
+
+/* Contact Section */
+
+.contact{
+    padding:70px 10%;
+    text-align:center;
+}
+
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 0 25px cyan;
+}
+
+
+.contact-box h3{
+    color:#FFD700;
+    font-size:35px;
+}
+
+
+.contact-box p{
+    font-size:20px;
+    margin:15px;
+}
+
+
+/* Google Map */
+
+.map{
+    padding:50px 5%;
+}
+
+
+.map iframe{
+    width:100%;
+    height:400px;
+    border:none;
+    border-radius:25px;
+    box-shadow:0 0 25px black;
+}
+
+
+/* Floating Buttons */
+
+.call-btn{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    width:65px;
+    height:65px;
+    background:#28a745;
+    color:white;
+    font-size:30px;
+    text-decoration:none;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 0 20px black;
+    transition:0.3s;
+}
+
+
+.whatsapp-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    color:white;
+    font-size:30px;
+    text-decoration:none;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 0 20px black;
+    transition:0.3s;
+}
+
+
+.call-btn:hover,
+.whatsapp-btn:hover{
+    transform:scale(1.15);
+}
+
+
+/* Dark Mode Button */
+
+.mode-btn{
+    position:fixed;
+    right:20px;
+    bottom:100px;
+    padding:12px 18px;
+    border:none;
+    border-radius:30px;
+    background:#FFD700;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+
+.dark{
+    background:#000 !important;
+    color:white !important;
+}
+
+
+/* Footer */
+
+footer{
+    margin-top:50px;
+    background:#020617;
+    text-align:center;
+    padding:35px;
+}
+
+
+footer h2{
+    color:#FFD700;
+    margin-bottom:15px;
+}
+
+
+footer p{
+    margin:10px;
+}
+
+</style>
+
+
+
+<!-- Contact -->
+
+<section class="contact" id="contact">
+
+<h2 class="title">
+📞 Contact Us
+</h2>
+
+
+<div class="contact-box">
+
+<h3>
+Firmware Institute of Technology
+</h3>
+
+
+<p>
+📍 Papayapet Chaman, Warangal
+</p>
+
+
+<p>
+📞 +91 9603312393
+</p>
+
+
+<p>
+📧 firmwarelearning@gmail.com
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<!-- Google Map -->
+
+<section class="map">
+
+<h2 class="title">
+📍 Our Location
+</h2>
+
+
+<iframe 
+src="https://maps.google.com/maps?q=Papayapet%20Chaman%20Warangal&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+
+</section>
+
+
+
+<!-- Floating Buttons -->
+
+<a href="tel:+919603312393" class="call-btn">
+📞
+</a>
+
+
+<a href="https://wa.me/919603312393" 
+class="whatsapp-btn" target="_blank">
+💬
+</a>
+
+
+
+<!-- Dark Mode -->
+
+<button onclick="darkMode()" class="mode-btn">
+🌙 Mode
+</button>
+
+
+<footer>
+
+<h2>
+Firmware Institute of Technology
+</h2>
+
+
+<p>
+Empowering Students with Knowledge, Technology & Innovation
+</p>
+
+
+<p>
+© 2026 Firmware Institute of Technology. All Rights Reserved.
+</p>
+
+</footer>
+
+
+
+<script>
+
+function darkMode(){
+
+document.body.classList.toggle("dark");
+
+}
+
+</script>
+<script>
+
+// Hide Loader After 2.5 Seconds
+
+window.onload = function(){
+
+setTimeout(function(){
+
+document.getElementById("loader")
+.style.display = "none";
+
+}, 2500);
+
+}
+
+</script>
+<script>
+
+let slides = document.querySelectorAll(".slide");
+
+let current = 0;
+
+
+function showSlide(index){
+
+slides[current].classList.remove("active");
+
+current = (index + slides.length) % slides.length;
+
+slides[current].classList.add("active");
+
+}
+
+
+function changeSlide(step){
+
+showSlide(current + step);
+
+}
+
+
+// Automatic sliding
+
+setInterval(function(){
+
+changeSlide(1);
+
+}, 4000);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Firmware Institute of Learning</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600");
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+}
+
+/* Header */
+
+header{
+    padding:40px 20px;
+}
+
+header h1{
+    font-size:55px;
+    color:#FFD700;
+    text-shadow:0 0 20px black;
+}
+
+header p{
+    font-size:22px;
+    margin-top:15px;
+}
+
+
+/* Main Box */
+
+.container{
+    height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+
+/* Floating Cards */
+
+.card{
+    width:350px;
+    height:250px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 10px 30px black;
+    transition:0.5s;
+    animation:float 3s infinite;
+}
+
+
+.card:hover{
+    transform:translateY(-20px) scale(1.08);
+    background:rgba(0,123,255,0.6);
+}
+
+
+.card h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+
+.card p{
+    font-size:18px;
+    line-height:1.6;
+}
+
+
+/* Button */
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 30px;
+    background:#FFD700;
+    color:black;
+    font-weight:bold;
+    border-radius:40px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+
+.btn:hover{
+    background:white;
+    transform:scale(1.1);
+}
+
+
+/* Floating Animation */
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+
+/* Footer */
+
+footer{
+    position:fixed;
+    bottom:10px;
+    width:100%;
+    text-align:center;
+    font-size:18px;
+}
+
+
+/* Mobile */
+
+@media(max-width:700px){
+
+header h1{
+    font-size:35px;
+}
+
+.card{
+    width:90%;
+}
+
+.container{
+    margin-top:20px;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>
+Firmware Institute of Learning
+</h1>
+
+<p>
+Future of Education, Technology & Innovation
+</p>
+
+</header>
+
+
+
+<div class="container">
+
+
+<div class="card">
+
+<h2>
+💻 Computer Courses
+</h2>
+
+<p>
+Python, Java, HTML, AI, Web Development, 
+Linux & Networking Training.
+</p>
+
+<a href="computer.html" class="btn">
+    Open Computer class
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>
+📚 School & Maths Classes
+</h2>
+
+<p>
+1st to Intermediate Classes,
+State, CBSE, Online & Offline Coaching.
+</p>
+
+<a href="maths.html" class="btn">
+    Open Maths class
+</a>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+© 2026 Firmware Institute of Learning | Director: Afsar Hussain
+
+</footer>
+
+
+</body>
+</html>
