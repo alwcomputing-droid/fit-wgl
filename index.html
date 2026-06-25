@@ -9,6 +9,11 @@
 
 <style>
 
+.logo img{
+    height:auto;
+    max-width:180px;
+    width:100%;
+}
     .logo-container{
     display:flex;
     align-items:center;
@@ -146,12 +151,15 @@ background-position:0% 50%;
 
 }
 
-*{
-    margin:0;
+*body{
+margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:Arial, sans-serif;
     scroll-behavior:smooth;
+}
+html,body{
+overflow-x:hidden;
 }
 
 body{
@@ -666,6 +674,83 @@ font-size:25px;
 .caption p{
 font-size:14px;
 }
+
+}
+/* Mobile Responsive */
+
+@media screen and (max-width: 768px){
+
+    nav{
+        flex-direction:column;
+        padding:10px;
+    }
+
+    .hero{
+        padding:20px;
+        text-align:center;
+    }
+
+    .courses-container,
+    .certificate-container,
+    .stats-container,
+    .lab-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .course-card,
+    .certificate-card,
+    .stat-box,
+    .computer{
+        width:90% !important;
+        margin:10px auto;
+    }
+
+    img{
+        max-width:100%;
+        height:auto;
+    }
+
+    iframe{
+        width:100%;
+    }
+
+    .clock{
+        top:80px;
+        right:10px;
+        font-size:12px;
+        padding:8px;
+    }
+
+    .ai-chat{
+        width:95%;
+        right:2.5%;
+        height:400px;
+    }
+
+    .login-box,
+    .admission-box,
+    .exam-box,
+    .portfolio,
+    .challenge,
+    .meeting-box,
+    .assignment-box,
+    .attendance,
+    .ranking{
+        width:95%;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    h2{
+        font-size:22px;
+    }
+
+    p{
+        font-size:15px;
+    }
 
 }
 </style>
