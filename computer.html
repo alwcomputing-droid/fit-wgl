@@ -3,9 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>School & and Intermediate class</title>
+<title>Computer & Technology Academy</title>
 
 <style>
+    body{
+    overflow-x: hidden;
+}
+.floating-home{
+    position:fixed;
+    left:20px;
+    bottom:95px;
+
+    width:60px;
+    height:60px;
+
+    background:#ff9800;
+    color:white;
+
+    border-radius:50%;
+    text-decoration:none;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:28px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+
+    z-index:9999;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px){
+    .floating-home{
+        left: 15px;
+        bottom: 15px;
+        padding: 12px 18px;
+        font-size: 16px;
+    }
+}
+
     /* Premium Popup */
 
 .popup{
@@ -1280,16 +1318,16 @@ Contact: +91 9603312393
 
 <section class="hero">
 
-<h1>School & and Intermediate class</h1>
+<h1>🖥️Computer & Technology Academy💻</h1>
 
 <h2 id="typing"></h2>
 
 <p>
-Papaiahpet Chaman, Warangal
+🗺️Papaiahpet Chaman, Warangal
 </p>
 
 <a href="#courses" class="btn">
-Explore Courses
+📙Explore Courses
 </a>
 
 </section>
@@ -1297,7 +1335,7 @@ Explore Courses
 <!-- ABOUT SECTION -->
 
 <h2 class="section-title" id="about">
-About School & and Intermediate class
+About  Computer & Technology Academy
 </h2>
 
 <div class="container">
@@ -1367,7 +1405,7 @@ Director Message
 <h2>Afsar Hussain</h2>
 
 <p>
-Welcome to School & and Intermediate class.
+Welcome to Computer & Technology Academy.
 Our goal is to help students learn modern
 programming languages, Technology skills,
 Hardware knowledge and career development.
@@ -2604,7 +2642,7 @@ Current Date & Time
 <!-- GOOGLE MAP -->
 
 <h2 class="section-title">
-Location
+🗺️Location
 </h2>
 
 <center>
@@ -2701,7 +2739,7 @@ background:#003366;
 padding:30px;
 text-align:center;">
 
-<h2>School & and Intermediate class</h2>
+<h2>🖥️Computer & Technology Academy</h2>
 
 <br>
 
@@ -2722,7 +2760,7 @@ Director: Afsar Hussain
 <br>
 
 <p>
-© 2026 School & and Intermediate class
+© 2026 Computer & Technology Academy
 </p>
 
 </footer>
@@ -2782,10 +2820,10 @@ let father = document.getElementById("fatherName").value;
 
 let message =
 "🎓 ADMISSION APPLICATION\n\n" +
-"Student Name: " + name + "\n" +
-"Email: " + email + "\n" +
-"Phone: " + phone + "\n\n" +
-"Father: " + father + "\n"+
+"👤Student Name: " + name + "\n" +
+"💻Email: " + email + "\n" +
+"📞Phone: " + phone + "\n\n" +
+"👨Father: " + father + "\n"+
 "Director: Afsar Hussain\n" +
 "Contact: +91 9603312393";
 
@@ -2799,7 +2837,7 @@ encodeURIComponent(message),
 </script>
 
 <div id="welcomeBox">
-🎉 Welcome to School & and Intermediate class<br>
+🎉 Welcome to Computer & Technology Academy<br>
 Admissions Open 2026-27
 </div>
 
@@ -3249,7 +3287,7 @@ body.innerHTML +=
 
 
 let reply =
-"Please contact our institute for complete details.";
+"Please contact our institute for complete details:+91 9603312393.";
 
 if(text.toLowerCase().includes("course")){
 
@@ -3533,6 +3571,8 @@ link.click();
 }
 
 </script>
-
+<a href="index.html" class="floating-home">
+🏠
+</a>
 </body>
 </html>

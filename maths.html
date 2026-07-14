@@ -4,13 +4,691 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mathematics class</title>
+<title>Mathematics Academy</title>
 
 <style>
+    .title{
+    animation:
+    lightning 1.5s infinite;
+}
 
-section{
-    padding:60px 10%;
-    animation:fadeIn 1.5s ease;
+@keyframes lightning{
+
+    0%{
+        text-shadow:
+        0 0 5px cyan;
+    }
+
+    50%{
+        text-shadow:
+        0 0 50px white,
+        0 0 100px cyan;
+    }
+
+    100%{
+        text-shadow:
+        0 0 5px cyan;
+    }
+}
+    .stars{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(white 1px, transparent 1px);
+    background-size:50px 50px;
+    animation:starsMove 20s linear infinite;
+    z-index:-2;
+}
+
+@keyframes starsMove{
+    from{
+        background-position:0 0;
+    }
+    to{
+        background-position:0 1000px;
+    }
+}
+    .neon{
+
+color:white;
+
+animation:
+neon 2s infinite;
+}
+
+@keyframes neon{
+
+0%{
+text-shadow:
+0 0 10px cyan;
+}
+
+50%{
+text-shadow:
+0 0 30px cyan,
+0 0 50px cyan;
+}
+
+100%{
+text-shadow:
+0 0 10px cyan;
+}
+}
+    body{
+
+background:
+linear-gradient(
+-45deg,
+#020024,
+#090979,
+#00d4ff,
+#6a11cb
+);
+
+background-size:
+400% 400%;
+
+animation:
+gradient 15s ease infinite;
+}
+
+@keyframes gradient{
+
+0%{
+background-position:
+0% 50%;
+}
+
+50%{
+background-position:
+100% 50%;
+}
+
+100%{
+background-position:
+0% 50%;
+}
+}
+    button{
+
+    animation:
+    glow 2s infinite;
+}
+
+@keyframes glow{
+
+    0%{
+        box-shadow:
+        0 0 5px cyan;
+    }
+
+    50%{
+        box-shadow:
+        0 0 30px cyan;
+    }
+
+    100%{
+        box-shadow:
+        0 0 5px cyan;
+    }
+}
+.bg-animation{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    z-index:-1;
+}
+
+.bg-animation span{
+
+    position:absolute;
+
+    display:block;
+
+    width:40px;
+    height:40px;
+
+    background:rgba(255,255,255,0.2);
+
+    border-radius:50%;
+
+    animation:float 20s linear infinite;
+}
+
+.bg-animation span:nth-child(1){
+    left:10%;
+    animation-duration:15s;
+}
+
+.bg-animation span:nth-child(2){
+    left:30%;
+    animation-duration:20s;
+}
+
+.bg-animation span:nth-child(3){
+    left:50%;
+    animation-duration:18s;
+}
+
+.bg-animation span:nth-child(4){
+    left:70%;
+    animation-duration:25s;
+}
+
+.bg-animation span:nth-child(5){
+    left:90%;
+    animation-duration:17s;
+}
+
+@keyframes float{
+
+    0%{
+        transform:
+        translateY(100vh)
+        rotate(0deg);
+
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        transform:
+        translateY(-100px)
+        rotate(360deg);
+
+        opacity:0;
+    }
+}
+body{
+
+    margin:0;
+    padding:0;
+
+    background:linear-gradient(
+        -45deg,
+        #fff3e0
+        #020024,
+        #090979,
+        #00d4ff,
+        #6a11cb,
+        #2575fc
+    );
+
+    background-size:400% 400%;
+
+    animation:bgAnimation 15s ease infinite;
+
+    font-family:Arial, sans-serif;
+}
+
+
+/* Animation */
+
+@keyframes bgAnimation{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#001f3f,#003366,#0066cc);
+    color:white;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:24px;
+    line-height:1.8;
+}
+
+.hero button{
+    padding:15px 40px;
+    margin-top:30px;
+    border:none;
+    border-radius:30px;
+    background:#FFD700;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.popup-box input,
+.popup-box select,
+.popup-box button{
+
+    display:block;
+
+    width:100%;
+
+    margin:10px 0;
+
+    padding:12px;
+
+    box-sizing:border-box;
+}
+ .popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    z-index:9999;
+
+    justify-content:center;
+    align-items:center;
+}
+.popup-box{
+
+
+
+    background:white;
+
+    color:black;
+
+    padding:30px;
+
+    border-radius:20px;
+}
+/* =====================================
+   PREMIUM MATHEMATICS COURSE SECTION
+===================================== */
+
+/* Main Section */
+
+.courses{
+
+    padding:80px 5%;
+
+    background:
+    linear-gradient(
+    135deg,
+    #020024,
+    #090979,
+    #00d4ff);
+
+    min-height:100vh;
+}
+
+
+/* Title */
+
+.title{
+
+    text-align:center;
+
+    font-size:50px;
+
+    color:white;
+
+    margin-bottom:60px;
+
+    text-shadow:
+    0 0 20px cyan;
+}
+
+
+/* Container */
+
+.course-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:stretch;
+
+    flex-wrap:wrap;
+
+    gap:35px;
+}
+
+
+/* 3D Glass Card */
+
+.course-card{
+
+    width:320px;
+
+    /* Fallback background */
+    background:rgba(255,255,255,0.20);
+
+    /* Glass effect */
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    color:white;
+
+    box-shadow:0 10px 30px black;
+
+    transition:0.5s;
+}
+
+
+/* Hover Effect */
+
+.course-card:hover{
+
+    transform:
+    translateY(-20px)
+    rotateY(5deg)
+    scale(1.03);
+
+    box-shadow:
+    0 0 40px cyan;
+}
+
+
+/* Card Image */
+
+.course-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+
+/* Image Hover */
+
+.course-card:hover img{
+
+    transform:
+    scale(1.1);
+}
+
+
+/* Card Heading */
+
+.course-card h2{
+
+    color:#FFD700;
+
+    margin:20px;
+
+    font-size:28px;
+
+    text-align:center;
+}
+
+
+/* Card Text */
+
+.course-card p{
+
+    margin:20px;
+
+    line-height:1.7;
+
+    font-size:16px;
+}
+
+
+/* Details */
+
+.course-card h3{
+
+    margin:15px 20px;
+
+    font-size:18px;
+
+    color:#00ffff;
+}
+
+
+/* Level */
+
+.course-card h4{
+
+    margin:20px;
+
+    color:#ffb300;
+
+    font-size:17px;
+}
+
+
+/* Join Button */
+
+.course-card button{
+
+    width:85%;
+
+    margin:20px auto;
+
+    display:block;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+    45deg,
+    #FFD700,
+    orange);
+
+    color:black;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+
+/* Button Hover */
+
+.course-card button:hover{
+
+    transform:
+    scale(1.07);
+
+    background:
+    linear-gradient(
+    45deg,
+    white,
+    #00ffff);
+
+    box-shadow:
+    0 0 20px cyan;
+}
+
+
+/* Shine Effect */
+
+.course-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+    45deg,
+    transparent,
+    rgba(255,255,255,.3),
+    transparent);
+
+    transition:.7s;
+}
+
+
+.course-card:hover::before{
+
+    top:100%;
+
+    left:100%;
+}
+
+
+/* Animation */
+
+@keyframes cardAnimation{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(50px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+    }
+}
+
+
+/* Tablet */
+
+@media(max-width:1000px){
+
+    .course-card{
+
+        width:300px;
+    }
+}
+
+
+/* Mobile */
+
+@media(max-width:700px){
+
+    .title{
+
+        font-size:35px;
+    }
+
+    .course-card{
+
+        width:95%;
+    }
+
+    .course-card h2{
+
+        font-size:24px;
+    }
+}
+
+
+/* Floating Animation */
+
+.course-card:nth-child(1){
+
+    animation-delay:.2s;
+}
+
+.course-card:nth-child(2){
+
+    animation-delay:.4s;
+}
+
+.course-card:nth-child(3){
+
+    animation-delay:.6s;
+}
+
+.course-card:nth-child(4){
+
+    animation-delay:.8s;
+}
+
+    body{
+    overflow-x: hidden;
+}
+.floating-home{
+    position:fixed;
+    left:20px;
+    bottom:95px;
+
+    width:60px;
+    height:60px;
+
+    background:#ff9800;
+    color:white;
+
+    border-radius:50%;
+    text-decoration:none;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:28px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+
+    z-index:9999;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px){
+    .floating-home{
+        left: 15px;
+        bottom: 15px;
+        padding: 12px 18px;
+        font-size: 16px;
+    }
 }
 
 
@@ -561,11 +1239,11 @@ color:white;
 
 
 <!-- Navigation -->
-
+<div class="stars"></div>
 <nav>
 
 <div class="logo">
-Mathematics class</div>
+Mathematics Academy</div>
 
 <ul>
 <li><a href="#about">About</a></li>
@@ -573,10 +1251,16 @@ Mathematics class</div>
 <li><a href="#features">Features</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
+<div class="bg-animation">
 
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
 </nav>
-
-
 
 <!-- Hero -->
 
@@ -590,12 +1274,15 @@ Mathematics class</div>
 
 <div>
 
-<h1>
-Welcome to <br>
-Mathematics class</h1>
+<h1 class="neon">
 
+Mathematics ACADEMY
+
+</h1>
 <p>
-Building Strong Mathematics Foundations for Every Student
+Building Strong Mathematics Foundations for Every Student<br>
+Physical Classes: 1st–10th Standard<br>
+Online Mathematics: 6th–10th, Intermediate & Polytechnic
 </p>
 
 <a href="#contact" class="btn">
@@ -628,6 +1315,147 @@ and CBSE Syllabus (NCERT).
 </p>
 
 </section>
+
+<!-- =========================
+     PREMIUM MATHEMATICS COURSES
+========================== -->
+
+<section class="courses">
+
+<h1 class="title">
+📚 Mathematics Courses
+</h1>
+
+<div class="course-container">
+
+
+<!-- School Mathematics -->
+
+<div class="course-card">
+
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600">
+
+<h2>School Mathematics</h2>
+
+<p>
+📖 Mathematics coaching for
+6th, 7th, 8th, 9th and 10th Classes 
+with SCERT & CBSE NCERT syllabus.
+</p>
+
+<h3>
+🏫 Classes:
+6th • 7th • 8th • 9th • 10th
+</h3>
+
+<h3>
+⏳ Duration:
+Academic Year
+</h3>
+
+<h3>
+💰 Fees:
+Contact Us
+</h3>
+
+<h4>
+Level:
+Beginner → Advanced
+</h4>
+
+<button onclick="openForm('School Mathematics (6th-10th)')">
+    Join Now
+</button>
+
+</div>
+
+
+
+<!-- Intermediate Mathematics -->
+
+<div class="course-card">
+
+<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600">
+
+<h2>Intermediate Mathematics</h2>
+
+<p>
+🎓 Complete Intermediate Maths
+for MPC students with concept-based
+learning and exam preparation.
+</p>
+
+<h3>
+🎓 Years:
+1st Year • 2nd Year
+</h3>
+
+<h3>
+⏳ Duration:
+2 Years
+</h3>
+
+<h3>
+💰 Fees:
+Contact Us
+</h3>
+
+<h4>
+Level:
+Intermediate → Advanced
+</h4>
+
+<button onclick="openForm('Intermediate class (1st year-2nd year)')">
+    Join Now
+</button>
+</div>
+
+
+
+<!-- Polytechnic Mathematics -->
+
+<div class="course-card">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600">
+
+<h2>Polytechnic Subjects</h2>
+
+<p>
+🏛️ Polytechnic Mathematics coaching
+for Diploma students with practical
+problem-solving methods.
+</p>
+
+<h3>
+🏛️ Years:
+1st Year • 2nd Year • 3rd Year
+</h3>
+
+<h3>
+⏳ Duration:
+3 Years
+</h3>
+
+<h3>
+💰 Fees:
+Contact Us
+</h3>
+
+<h4>
+Level:
+Advanced
+</h4>
+
+<button onclick="openForm('Polytechnics class (1st year - 3rd year)')">
+    Join Now
+</button>
+</div>
+
+
+</div>
+
+</section>
+
 
 
 
@@ -687,6 +1515,21 @@ Concept Based Learning & Problem Solving
 
 </div>
 
+
+
+<div class="card">
+
+<h3>🎓 Polytechnics Mathematics</h3>
+
+<p>
+
+Online Mathematics Coaching<br><br>
+
+Concept Based Learning & Problem Solving
+
+</p>
+
+</div>
 
 </div>
 
@@ -782,8 +1625,7 @@ Building confidence, knowledge and bright futures.
 
 <input type="text" id="father" placeholder="Father Name" required>
 
-<input type="tel" id="phone" placeholder="Phone Number" required>
-
+<input type="text"id="phone"name="phone"placeholder="Phone Number"maxlength="10"required>
 
 <select id="studentClass" required>
 <option value="">Select Class</option>
@@ -834,7 +1676,7 @@ Building confidence, knowledge and bright futures.
 <div class="card">
 <h3>★★★★★</h3>
 <p>
-"Ample Academy helped me improve my Mathematics concepts and scores."
+"Mathemetics Academy helped me improve my Mathematics concepts and scores."
 </p>
 </div>
 
@@ -858,6 +1700,19 @@ Building confidence, knowledge and bright futures.
 </div>
 
 </section>
+
+<section class="map">
+
+<h1>Visit Us</h1>
+
+<iframe
+src="https://maps.google.com/maps?q=Papaiahpet%20Chaman%20Warangal&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="400">
+</iframe>
+
+</section>
+
 <!-- Contact -->
 
 
@@ -946,83 +1801,343 @@ window.open(url, "_blank");
     💬
 </a>
 <script>
-
 function sendAdmission(){
+console.log(
+    document.getElementById("studentName")
+);
 
-let data = 
-"🎓 Mathematics class - NEW ADMISSION\n\n";
+console.log(
+    document.getElementById("fatherName")
+);
 
-let fields = [
-"name","father","mother",
-"phone","whatsapp",
-"dob","gender",
-"studentClass","syllabus",
-"classType","timing",
-"school","goal",
-"address","message"
-];
+console.log(
+    document.getElementById("phone")
+);
 
+    console.log(
+    document.getElementById("phone").value
+);
 
-let names = [
-"Student Name",
-"Father Name",
-"Mother Name",
-"Phone",
-"WhatsApp",
-"DOB",
-"Gender",
-"Class",
-"Syllabus",
-"Class Type",
-"Timing",
-"School",
-"Goal",
-"Address",
-"Parent Message"
-];
+console.log(
+    document.getElementById("studentClass").value
+);
 
+console.log(
+    document.getElementById("syllabus").value
+);
 
-for(let i=0;i<fields.length;i++){
-
-data += names[i] + ": " +
-document.getElementById(fields[i]).value 
-+ "\n";
+console.log(
+    document.getElementById("classType").value
+);
 
 }
+function sendAdmission(){
+
+    let data =
+    "🎓 AMPLE ACADEMY OF LEARNING\n\n" +
+    "📋 NEW ADMISSION\n\n";
+
+    data += "Student Name: " +
+    document.getElementById("studentName").value + "\n";
+
+    data += "Father Name: " +
+    document.getElementById("fatherName").value + "\n";
+
+    data += "Phone: " +
+    document.getElementById("phone").value + "\n";
+
+    data += "Course: " +
+    document.getElementById("courseName").value + "\n";
+
+    data += "Class: " +
+    document.getElementById("studentClass").value + "\n";
+
+    data += "Syllabus: " +
+    document.getElementById("syllabus").value + "\n";
+
+    data += "Class Type: " +
+    document.getElementById("classType").value + "\n";
 
 
-let url =
-"https://wa.me/919603312393?text="
-+ encodeURIComponent(data);
+    let url =
+    "https://wa.me/919603312393?text=" +
+    encodeURIComponent(data);
 
-
-window.open(url,"_blank");
-
+    window.open(url,"_blank");
 }
 
 </script>
 
+<a href="index.html" class="floating-home">
+🏠
+</a>
+<div id="admissionPopup" class="popup">
+
+    <div class="popup-box">
+
+        <span class="close" onclick="closeForm()">❌</span>
+
+        <h2>🎓 Course Admission</h2>
+
+        <input type="text" id="studentName"
+        placeholder="Student Name">
+
+        <input type="text" id="fatherName"
+        placeholder="Father Name">
+
+        <input type="tel" id="admissionPhone"
+        placeholder="Phone Number">
+
+        <input type="text" id="courseName"
+        readonly>
+
+        <input type="text" id="admissionClass"
+        placeholder="Class">
+
+      <select id="admissionSyllabus">
+    <option value="">Select Syllabus</option>
+    <option value="State (SCERT)">State (SCERT)</option>
+    <option value="CBSE (NCERT)">CBSE (NCERT)</option>
+</select>
+
+<select id="admissionClassType">
+    <option value="">Choose Class Type</option>
+    <option value="Online">Online</option>
+    <option value="Offline">Offline</option>
+    <option value="Both">Both</option>
+</select>
+        <button onclick="sendAdmission()">
+            Submit Admission
+        </button>
+
+    </div>
+
+</div>
+
 <script>
 
-document.querySelector(".chatbot")
-.onclick = function(){
+function openAdmissionForm(course){
 
-let question = prompt(
-"Hello! Welcome to Mathematics class.\n\nAsk your question:"
-);
+    document.getElementById("admissionPopup")
+    .style.display="none";
 
-if(question){
+    document.getElementById("selectedCourse")
+    .value=course;
 
-let answer =
-"Thank you for your enquiry.\n\nOur team will contact you soon.\n\nFor instant support call or WhatsApp: +91 9603312393";
+    let year=document.getElementById("courseYear");
 
-alert(answer);
+    year.innerHTML="";
+
+    if(course=="School Classes"){
+
+        year.innerHTML=`
+            <option value="">Select Class</option>
+            <option>6th Class</option>
+            <option>7th Class</option>
+            <option>8th Class</option>
+            <option>9th Class</option>
+            <option>10th Class</option>
+        `;
+
+    }
+
+    else if(course=="Intermediate"){
+
+        year.innerHTML=`
+            <option value="">Select Year</option>
+            <option>1st Year</option>
+            <option>2nd Year</option>
+        `;
+
+    }
+
+    else if(course=="Polytechnic"){
+
+        year.innerHTML=`
+            <option value="">Select Year</option>
+            <option>1st Year</option>
+            <option>2nd Year</option>
+            <option>3rd Year</option>
+        `;
+
+    }
+
+}
+function closeAdmissionForm(){
+
+document.getElementById("admissionPopup")
+.style.display = "flex";
 
 }
 
+
+</script>
+<script>
+
+// Open Popup
+
+function openForm(course){
+
+    document.getElementById(
+        "admissionPopup"
+    ).style.display = "flex";
+
+    document.getElementById(
+        "courseName"
+    ).value = course;
+}
+
+
+
+// Close Popup
+
+function closeForm(){
+
+document.getElementById(
+"admissionPopup"
+).style.display = "none";
+
+}
+
+
+
+// Send Admission
+
+function sendAdmission(){
+
+    let student =
+    document.getElementById(
+        "studentName"
+    ).value;
+
+    let father =
+    document.getElementById(
+        "fatherName"
+    ).value;
+
+    let phone =
+    document.getElementById("admissionPhone").value;
+    let course =
+    document.getElementById(
+        "courseName"
+    ).value;
+
+    let studentClass =
+    document.getElementById("admissionClass").value;
+
+
+    let syllabus =
+    document.getElementById("admissionSyllabus").value;
+
+    let classType =
+    document.getElementById("admissionClassType").value;
+
+    // Validation
+
+   if(
+    student.trim()==="" ||
+    father.trim()==="" ||
+    phone.trim()===""
+){
+    alert("Please fill all required fields.");
+    return;
+}
+
+
+
+    let today =
+    new Date().toLocaleString();
+
+
+
+    let message =
+
+    "🎓 AMPLE ACADEMY OF LEARNING\n\n" +
+
+    "📋 NEW ADMISSION REQUEST\n\n" +
+
+    "👤 Student Name: " +
+    student + "\n\n" +
+
+    "👨 Father Name: " +
+    father + "\n\n" +
+
+    "📞 Phone Number: " +
+    phone + "\n\n" +
+
+    "📚 Course: " +
+    course + "\n\n" +
+
+    "🏫 Class: " +
+    studentClass + "\n\n" +
+
+    "📖 Syllabus: " +
+    syllabus + "\n\n" +
+
+    "💻 Class Type: " +
+    classType + "\n\n" +
+
+    "📅 Date & Time: " +
+    today;
+
+
+
+    let url =
+    "https://wa.me/919603312393?text=" +
+    encodeURIComponent(message);
+
+
+
+    window.open(url,"_blank");
+
+   }
+   </script>
+<script>
+    // Reset Form
+
+    document.getElementById(
+        "studentName"
+    ).value = "";
+
+    document.getElementById(
+        "fatherName"
+    ).value = "";
+
+    document.getElementById(
+        "phone"
+    ).value = "";
+
+    document.getElementById(
+        "studentClass"
+    ).value = "";
+
+
+
+    document.getElementById(
+        "syllabus"
+    ).selectedIndex = 0;
+
+    document.getElementById(
+        "classType"
+    ).selectedIndex = 0;
+
+
+
+    closeForm();
+
+
+</script>
+<script>
+
+function openForm(course){
+
+    document.getElementById("admissionPopup")
+    .style.display = "flex";
+
+    document.getElementById("courseName")
+    .value = course;
 }
 
 </script>
 </body>
-
 </html>
