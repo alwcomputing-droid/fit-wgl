@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firmware Institute of Technology — Papaiahpet Chaman, Warangal</title>
+<style>
+:root{
+  --cyan:#00ffff;
+  --gold:#FFD700;
+  --green:#25D366;
+  --panel:rgba(255,255,255,0.12);
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif;}
+html{scroll-behavior:smooth;}
+html,body{overflow-x:hidden; width:100%;}
+img,video,iframe{max-width:100%;}
+
+body{
+  background:linear-gradient(-45deg,#020024,#090979,#00d4ff,#6a11cb);
+  background-size:400% 400%;
+  animation:gradientMove 18s ease infinite;
+  color:white;
+  min-height:100vh;
+}
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* particles */
+.particles{position:fixed; inset:0; z-index:-2; overflow:hidden; pointer-events:none;}
+.particles span{
+  position:absolute; bottom:-20px; display:block; width:5px; height:5px;
+  background:white; border-radius:50%;
+  box-shadow:0 0 10px cyan, 0 0 20px cyan, 0 0 35px blue;
+  animation:moveStars 16s linear infinite;
+}
+.particles span:nth-child(1){left:8%; animation-duration:12s;}
+.particles span:nth-child(2){left:18%; animation-duration:18s;}
+.particles span:nth-child(3){left:28%; animation-duration:10s;}
+.particles span:nth-child(4){left:40%; animation-duration:20s;}
+.particles span:nth-child(5){left:52%; animation-duration:15s;}
+.particles span:nth-child(6){left:63%; animation-duration:17s;}
+.particles span:nth-child(7){left:74%; animation-duration:13s;}
+.particles span:nth-child(8){left:85%; animation-duration:16s;}
+.particles span:nth-child(9){left:93%; animation-duration:14s;}
+.particles span:nth-child(10){left:97%; animation-duration:19s;}
+@keyframes moveStars{
+  0%{transform:translateY(0); opacity:0;}
+  20%{opacity:1;}
+  80%{opacity:1;}
+  100%{transform:translateY(-105vh); opacity:0;}
+}
+
+/* loader */
+#loader{
+  position:fixed; inset:0; background:black; z-index:99999;
+  display:flex; justify-content:center; align-items:center;
+}
+.loader-text{font-size:clamp(20px,4vw,34px); color:var(--gold); font-weight:bold; text-align:center; animation:glowPulse 1.2s infinite;}
+@keyframes glowPulse{
+  0%{transform:scale(1); text-shadow:0 0 10px gold;}
+  50%{transform:scale(1.1); text-shadow:0 0 30px gold, 0 0 55px orange;}
+  100%{transform:scale(1); text-shadow:0 0 10px gold;}
+}
+
+/* marquee notice */
+.notice{background:var(--gold); color:black; padding:8px; font-weight:bold; text-align:center; position:relative; z-index:500;}
+
+/* nav */
+nav{
+  position:sticky; top:0; z-index:400;
+  background:rgba(0,0,30,0.88);
+  backdrop-filter:blur(10px);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:14px 4vw; flex-wrap:wrap; gap:10px;
+}
+.brand{font-size:20px; font-weight:bold; color:var(--gold); display:flex; align-items:center; gap:10px;}
+.navlinks{display:flex; gap:6px; flex-wrap:wrap; align-items:center;}
+.navlinks button{
+  background:none; border:1px solid rgba(255,255,255,0.25); color:white;
+  padding:9px 16px; border-radius:30px; cursor:pointer; font-size:14px; transition:0.25s;
+}
+.navlinks button:hover, .navlinks button.active{background:var(--cyan); color:black; border-color:var(--cyan);}
+.navlinks .apply-btn{background:var(--green); border-color:var(--green); font-weight:bold;}
+.navlinks .apply-btn:hover{background:#1ebc59;}
+
+/* page sections */
+.page{display:none; animation:fadeIn 0.5s ease;}
+.page.active{display:block;}
+@keyframes fadeIn{from{opacity:0; transform:translateY(15px);} to{opacity:1; transform:translateY(0);}}
+
+/* hero */
+.hero{
+  min-height:78vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+  text-align:center; padding:60px 20px;
+}
+.hero h1{font-size:clamp(30px,5vw,58px); text-shadow:0 0 25px gold; color:var(--gold);}
+.hero h3{font-size:clamp(16px,2.5vw,22px); margin-top:14px; color:#c9f7ff; font-weight:normal;}
+.hero p{margin:20px 0; font-size:clamp(15px,2vw,20px); max-width:700px; line-height:1.7;}
+.btn{
+  display:inline-block; background:var(--cyan); color:black; padding:14px 32px;
+  text-decoration:none; border-radius:40px; font-size:17px; font-weight:bold; border:none; cursor:pointer; transition:0.3s;
+}
+.btn:hover{box-shadow:0 0 25px cyan; transform:scale(1.06);}
+.btn.gold{background:var(--gold);}
+.btn.gold:hover{box-shadow:0 0 25px gold;}
+
+/* section title */
+.title{text-align:center; font-size:clamp(26px,4vw,42px); color:var(--gold); margin:10px 0 40px; text-shadow:0 0 15px rgba(255,215,0,0.4);}
+.section{padding:70px 5%;}
+
+/* generic card containers */
+.container{display:flex; flex-wrap:wrap; justify-content:center; gap:24px; padding:10px 0;}
+.card{
+  width:300px; background:var(--panel); border:1px solid rgba(255,255,255,0.15);
+  border-radius:20px; padding:26px; backdrop-filter:blur(10px); transition:0.4s;
+}
+.card:hover{transform:translateY(-10px); box-shadow:0 0 25px rgba(0,255,255,0.35);}
+.card h2, .card h3{color:var(--gold); margin-bottom:12px;}
+.card p{line-height:1.6; font-size:14.5px; color:#e5e5e5;}
+
+/* academy chooser cards on home */
+.academy-container{display:flex; justify-content:center; flex-wrap:wrap; gap:36px; padding:20px 5% 60px;}
+.academy-card{
+  width:360px; min-height:420px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.3);
+  border-radius:25px; backdrop-filter:blur(15px); padding:34px; text-align:center;
+  box-shadow:0 0 25px rgba(0,255,255,0.25); transition:0.4s;
+}
+.academy-card:hover{transform:translateY(-15px) scale(1.03); box-shadow:0 0 40px cyan;}
+.academy-card .icon{font-size:64px;}
+.academy-card h2{margin:16px 0; color:var(--gold); font-size:26px;}
+.academy-card p{line-height:1.8; font-size:15px; margin-bottom:16px;}
+
+/* stats */
+.stats-container{display:flex; justify-content:center; flex-wrap:wrap; gap:26px;}
+.stat{width:200px; background:var(--panel); padding:26px; border-radius:20px; text-align:center; transition:0.4s;}
+.stat:hover{transform:translateY(-10px);}
+.stat h1{font-size:42px; color:var(--cyan);}
+
+/* course cards */
+.course-container{display:flex; justify-content:center; flex-wrap:wrap; gap:30px;}
+.course-card{
+  width:310px; background:rgba(255,255,255,0.13); border-radius:22px; overflow:hidden;
+  transition:0.4s; box-shadow:0 8px 22px rgba(0,0,0,0.35);
+}
+.course-card:hover{transform:translateY(-14px) scale(1.03); box-shadow:0 0 35px cyan;}
+.course-card img{width:100%; height:190px; object-fit:cover;}
+.course-card h2{margin:16px; color:var(--gold); font-size:22px;}
+.course-card p{margin:0 16px 10px; font-size:14.5px; line-height:1.6;}
+.course-card h4{margin:0 16px 14px; color:#ffb300; font-size:14px;}
+.course-card button{
+  width:85%; margin:0 auto 20px; display:block; padding:13px; border:none; border-radius:30px;
+  background:linear-gradient(45deg,var(--gold),orange); color:black; font-size:15.5px; font-weight:bold;
+  cursor:pointer; transition:0.3s;
+}
+.course-card button:hover{background:linear-gradient(45deg,white,var(--cyan)); transform:scale(1.04);}
+
+/* certificates */
+.certificate-container{display:flex; justify-content:center; flex-wrap:wrap; gap:26px;}
+.certificate-card{width:300px; background:rgba(255,255,255,0.12); border-radius:22px; overflow:hidden; box-shadow:0 0 20px rgba(0,255,255,0.3); transition:0.4s;}
+.certificate-card:hover{transform:translateY(-10px) scale(1.03); box-shadow:0 0 35px gold;}
+.certificate-card img{width:100%; height:190px; object-fit:cover;}
+.certificate-card h3{color:var(--gold); margin:14px;}
+.certificate-card p{padding:0 16px 20px; font-size:14px; line-height:1.6;}
+
+/* achievement ticker */
+.achievement-slider{margin-top:40px; overflow:hidden; border-radius:30px; background:rgba(0,255,255,0.12); padding:16px;}
+.achievement-track{display:flex; width:max-content; animation:slideAch 22s linear infinite;}
+.achievement{font-size:18px; color:var(--gold); margin-right:60px; white-space:nowrap; font-weight:bold;}
+@keyframes slideAch{0%{transform:translateX(100%);} 100%{transform:translateX(-100%);}}
+
+/* dashboard / compiler / exam */
+.panel-box{
+  max-width:800px; margin:30px auto; padding:28px; background:var(--panel); border-radius:22px;
+  box-shadow:0 0 25px rgba(0,255,255,0.25);
+}
+.progress-bar{width:100%; height:28px; background:#222; border-radius:20px; overflow:hidden;}
+.progress-fill{width:0%; height:100%; background:linear-gradient(90deg,var(--cyan),#00ff00); color:black; font-weight:bold; line-height:28px; text-align:center; transition:width 1.4s ease;}
+select, textarea, input{
+  width:100%; padding:12px; margin:8px 0; border-radius:10px; border:none; font-size:15px;
+}
+textarea{resize:vertical;}
+#codeArea{height:180px; font-family:monospace;}
+#output{width:100%; height:220px; background:white; border-radius:14px; border:none;}
+.question{text-align:left; margin:18px 0;}
+.question label{display:block; margin:8px 0; font-size:14.5px;}
+#result{color:var(--gold); margin-top:14px; font-size:18px;}
+
+/* facilities/testimonials reuse .card */
+
+/* admission popup */
+.popup{display:none; position:fixed; inset:0; background:rgba(0,0,0,0.82); z-index:9999; justify-content:center; align-items:center; padding:20px;}
+.popup.open{display:flex;}
+.popup-box{width:100%; max-width:440px; background:rgba(20,20,40,0.95); border:1px solid rgba(255,255,255,0.2); backdrop-filter:blur(15px); padding:28px; border-radius:22px; box-shadow:0 0 35px cyan; color:white; max-height:90vh; overflow-y:auto;}
+.popup-box h2{color:var(--gold); margin-bottom:16px;}
+.popup-box .close{float:right; font-size:22px; cursor:pointer;}
+.popup-box input, .popup-box select{background:white; color:black;}
+
+/* map */
+.map-frame{width:100%; height:380px; border:none; border-radius:20px; box-shadow:0 0 20px black;}
+
+/* footer */
+footer{background:#020617; text-align:center; padding:36px 5%; margin-top:20px;}
+footer h2{color:var(--gold); margin-bottom:10px;}
+footer p{margin:6px 0; font-size:14.5px;}
+
+/* floating buttons */
+.floating-call, .floating-whatsapp, #topBtn, .dark-btn{
+  position:fixed; z-index:998; border-radius:50%; display:flex; justify-content:center; align-items:center;
+  width:58px; height:58px; text-decoration:none; font-size:26px; cursor:pointer; border:none;
+  box-shadow:0 5px 15px rgba(0,0,0,0.4); transition:0.3s;
+}
+.floating-call{left:20px; bottom:20px; background:#28a745; color:white; animation:ring 2s infinite;}
+.floating-whatsapp{right:20px; bottom:20px; background:var(--green); color:white; animation:pulse 2s infinite;}
+#topBtn{right:20px; bottom:90px; background:#003366; color:white; display:none; font-size:20px;}
+.dark-btn{left:20px; bottom:90px; background:var(--gold); color:black; font-size:20px;}
+.floating-call:hover, .floating-whatsapp:hover, #topBtn:hover, .dark-btn:hover{transform:scale(1.12);}
+@keyframes ring{0%{transform:scale(1);} 50%{transform:scale(1.12);} 100%{transform:scale(1);}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);} 70%{box-shadow:0 0 0 14px rgba(37,211,102,0);} 100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}}
+
+/* dark mode */
+body.dark{background:#05070f !important; animation:none;}
+body.dark .card, body.dark .course-card, body.dark .certificate-card, body.dark .panel-box, body.dark .stat, body.dark .academy-card{background:rgba(255,255,255,0.06);}
+
+/* mobile */
+@media(max-width:820px){
+  .navlinks{width:100%; justify-content:center;}
+  .hero{padding:50px 15px;}
+  .section{padding:50px 5%;}
+  .academy-card{width:100%;}
+  .course-card{width:100%; max-width:340px;}
+}
+</style>
+</head>
+<body>
+
+<div id="loader"><div class="loader-text">FIRMWARE INSTITUTE OF TECHNOLOGY</div></div>
+<div class="particles">
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="notice">
+  <marquee>🎓 Admissions Open 2026–27 &nbsp; | &nbsp; Python • Java • Web Dev • AI • Hardware & Networking • School & Intermediate Mathematics &nbsp; | &nbsp; Contact: +91 9603312393</marquee>
+</div>
+
+<nav>
+  <div class="brand">🎓 Firmware Institute of Technology</div>
+  <div class="navlinks">
+    <button onclick="showPage('home')" class="navbtn active" data-page="home">Home</button>
+    <button onclick="showPage('computer')" class="navbtn" data-page="computer">Computer Academy</button>
+    <button onclick="showPage('math')" class="navbtn" data-page="math">Mathematics Academy</button>
+    <button onclick="showPage('contact')" class="navbtn" data-page="contact">Contact</button>
+    <button class="apply-btn" onclick="openForm('General Enquiry','Firmware Institute of Technology')">Apply Now</button>
+  </div>
+</nav>
+
+<!-- ============ HOME PAGE ============ -->
+<main class="page active" id="page-home">
+
+  <section class="hero">
+    <h1>Firmware Institute of Technology</h1>
+    <h3>Papaiahpet Chaman, Warangal, Telangana</h3>
+    <p>Empowering students with knowledge, technology and innovation — through our Computer & Technology Academy and School & Mathematics Academy, under one roof.</p>
+    <button class="btn" onclick="showPage('computer')">Explore Academies ↓</button>
+  </section>
+
+  <h2 class="title">🏫 Our Learning Academies</h2>
+  <div class="academy-container">
+    <div class="academy-card">
+      <div class="icon">💻</div>
+      <h2>Computer & Technology Academy</h2>
+      <p>Python • C & C++ • Java • HTML, CSS, JavaScript • Web Development • Artificial Intelligence • Hardware & Networking</p>
+      <button class="btn" onclick="showPage('computer')">Enter Computer Academy</button>
+    </div>
+    <div class="academy-card">
+      <div class="icon">📚</div>
+      <h2>School & Mathematics Academy</h2>
+      <p>Classes 1st–10th • Intermediate • Polytechnic • State (SCERT) • CBSE (NCERT) • Online & Offline Classes</p>
+      <button class="btn" onclick="showPage('math')">Enter Mathematics Academy</button>
+    </div>
+  </div>
+
+  <section class="section">
+    <h2 class="title">Why Choose Us</h2>
+    <div class="stats-container">
+      <div class="stat"><h1 id="statStudents">0</h1><h3>Students Trained</h3></div>
+      <div class="stat"><h1 id="statCourses">0</h1><h3>Courses Offered</h3></div>
+      <div class="stat"><h1 id="statTeachers">0</h1><h3>Expert Faculty</h3></div>
+      <div class="stat"><h1 id="statSuccess">0</h1><h3>% Success Rate</h3></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="title">📝 Quick Admission Form</h2>
+    <div class="panel-box" style="text-align:center;">
+      <input type="text" id="qa-name" placeholder="Student Name">
+      <input type="text" id="qa-father" placeholder="Father Name">
+      <input type="tel" id="qa-phone" placeholder="Phone Number">
+      <select id="qa-course">
+        <option value="">Select Course</option>
+        <option>Computer Courses</option>
+        <option>School Classes</option>
+        <option>Mathematics</option>
+      </select>
+      <select id="qa-type">
+        <option value="">Choose Class Type</option>
+        <option>Online</option>
+        <option>Offline</option>
+        <option>Both Online & Offline</option>
+      </select>
+      <button class="btn gold" onclick="sendQuickAdmission()">📩 Send on WhatsApp</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="title">📸 Our Learning Environment</h2>
+    <div class="container">
+      <div class="card"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600" style="width:100%;border-radius:14px;margin-bottom:12px;"><h3>Modern Computer Labs</h3><p>Practical sessions on the latest technology.</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600" style="width:100%;border-radius:14px;margin-bottom:12px;"><h3>Expert Faculty</h3><p>Professional teachers guiding your future.</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" style="width:100%;border-radius:14px;margin-bottom:12px;"><h3>Programming & AI</h3><p>Build your career with future technologies.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ COMPUTER ACADEMY PAGE ============ -->
+<main class="page" id="page-computer">
+
+  <section class="hero">
+    <h1>🖥️ Computer & Technology Academy</h1>
+    <p>Papaiahpet Chaman, Warangal — Lab practising, real-time projects and industry-ready training.</p>
+    <button class="btn" onclick="document.getElementById('ct-courses').scrollIntoView({behavior:'smooth'})">📙 Explore Courses</button>
+  </section>
+
+  <section class="section">
+    <h2 class="title">About the Academy</h2>
+    <div class="container">
+      <div class="card"><h2>Lab Practising</h2><p>Students gain practical knowledge through real-time projects and computer lab sessions.</p></div>
+      <div class="card"><h2>Python, HTML & Java Classes</h2><p>Professional training in Python, HTML, CSS, Java and Web Development.</p></div>
+      <div class="card"><h2>Practical Lab</h2><p>Modern lab facilities help students gain industry-ready experience.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="title">Director's Message</h2>
+    <div class="container">
+      <div class="card" style="width:min(700px,100%);">
+        <h2>Afsar Hussain</h2>
+        <p>Welcome to Computer & Technology Academy. Our goal is to help students learn modern programming languages, technology skills, hardware knowledge and career development. We believe practical learning is the key to success in today's technology world.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ct-courses">
+    <h2 class="title">💻 Computer & Technology Courses</h2>
+    <div class="course-container">
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600">
+        <h2>Python Programming</h2>
+        <p>🐍 Learn Python from basics to advanced, automation and real projects.</p>
+        <h4>Level: Beginner → Advanced</h4>
+        <button onclick="openForm('Python Programming','Computer & Technology Academy')">Join Now</button>
+      </div>
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600">
+        <h2>Web Development</h2>
+        <p>🌐 Create responsive websites using HTML, CSS & JavaScript.</p>
+        <h4>Level: Beginner → Professional</h4>
+        <button onclick="openForm('Web Development','Computer & Technology Academy')">Join Now</button>
+      </div>
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600">
+        <h2>Java Programming</h2>
+        <p>☕ Build software applications using Core and Advanced Java.</p>
+        <h4>Level: Intermediate</h4>
+        <button onclick="openForm('Java Programming','Computer & Technology Academy')">Join Now</button>
+      </div>
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600">
+        <h2>Artificial Intelligence</h2>
+        <p>🤖 Learn AI tools, prompt engineering and future technologies.</p>
+        <h4>Level: Advanced</h4>
+        <button onclick="openForm('Artificial Intelligence','Computer & Technology Academy')">Join Now</button>
+      </div>
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600">
+        <h2>Hardware & Networking</h2>
+        <p>🔧 Computer assembling, troubleshooting and network fundamentals.</p>
+        <h4>Level: Beginner → Intermediate</h4>
+        <button onclick="openForm('Hardware & Networking','Computer & Technology Academy')">Join Now</button>
+      </div>
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600">
+        <h2>C / C++ Programming</h2>
+        <p>⚙️ Core programming foundations used in systems and embedded software.</p>
+        <h4>Level: Beginner → Intermediate</h4>
+        <button onclick="openForm('C / C++ Programming','Computer & Technology Academy')">Join Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="title">🏆 Certificates & Achievements</h2>
+    <div class="certificate-container">
+      <div class="certificate-card"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600"><h3>Course Completion Certificate</h3><p>Awarded after successful completion of professional courses.</p></div>
+      <div class="certificate-card"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600"><h3>Student Achievement</h3><p>Students build projects and achieve excellent results.</p></div>
+      <div class="certificate-card"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600"><h3>Technology Excellence</h3><p>Recognizing innovation, creativity and technical skills.</p></div>
+    </div>
+    <div class="achievement-slider">
+      <div class="achievement-track">
+        <div class="achievement">🥇 Students Successfully Trained</div>
+        <div class="achievement">💻 Real-Time Projects Completed</div>
+        <div class="achievement">🏆 Strong Student Success Rate</div>
+        <div class="achievement">🌎 Online & Offline Classes Available</div>
+        <div class="achievement">🎓 Professional Certificates Provided</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="title">📈 Student Dashboard (Demo)</h2>
+    <div class="panel-box">
+      <h3 style="margin-bottom:10px;">Course Progress</h3>
+      <div class="progress-bar"><div class="progress-fill" id="ctProgress" data-target="75">0%</div></div>
+    </div>
+    <div class="panel-box">
+      <h3 style="margin-bottom:10px;">💻 Coding Playground</h3>
+      <select id="ctLanguage">
+        <option>HTML</option><option>CSS</option><option>JavaScript</option>
+      </select>
+      <textarea id="codeArea" placeholder="Write your HTML/CSS/JS here..."></textarea>
+      <button class="btn" onclick="runCode()">▶ Run Code</button>
+      <iframe id="output" style="margin-top:12px;"></iframe>
+    </div>
+    <div class="panel-box">
+      <h3 style="margin-bottom:10px;">📝 Quick Online Test</h3>
+      <div class="question"><p>1. HTML stands for?</p>
+        <label><input type="radio" name="q1" value="0"> Hyper Text Machine Language</label>
+        <label><input type="radio" name="q1" value="1"> Hyper Text Markup Language</label>
+      </div>
+      <div class="question"><p>2. JavaScript is used for?</p>
+        <label><input type="radio" name="q2" value="1"> Making websites interactive</label>
+        <label><input type="radio" name="q2" value="0"> Only designing logos</label>
+      </div>
+      <div class="question"><p>3. AI means?</p>
+        <label><input type="radio" name="q3" value="1"> Artificial Intelligence</label>
+        <label><input type="radio" name="q3" value="0"> Automatic Internet</label>
+      </div>
+      <button class="btn gold" onclick="checkExam()">Submit Test</button>
+      <h3 id="result"></h3>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="title">Career Opportunities & Salary Guide</h2>
+    <div class="container">
+      <div class="card"><h2>Web Developer</h2><p>Create websites and web applications.</p><p><b>₹4 – ₹10 LPA</b></p></div>
+      <div class="card"><h2>Python Developer</h2><p>Build software, AI and automation projects.</p><p><b>₹5 – ₹15 LPA</b></p></div>
+      <div class="card"><h2>Java Developer</h2><p>Develop enterprise applications and software.</p><p><b>₹5 – ₹18 LPA</b></p></div>
+      <div class="card"><h2>AI Engineer</h2><p>Build Artificial Intelligence applications.</p><p><b>₹8 – ₹30 LPA</b></p></div>
+      <div class="card"><h2>Cyber Security Analyst</h2><p>Protect systems and networks from cyber threats.</p><p><b>₹6 – ₹20 LPA</b></p></div>
+      <div class="card"><h2>Cloud Engineer</h2><p>Manage cloud infrastructure and services.</p><p><b>₹7 – ₹25 LPA</b></p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="title">Institute Facilities</h2>
+    <div class="container">
+      <div class="card"><h2>Computer Lab</h2><p>Modern computers with the latest software.</p></div>
+      <div class="card"><h2>Practical Lab</h2><p>Hands-on practical learning sessions.</p></div>
+      <div class="card"><h2>Smart Classroom</h2><p>Digital teaching with projectors and presentations.</p></div>
+      <div class="card"><h2>Career Guidance</h2><p>Support for jobs and career planning.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="title">Student Testimonials</h2>
+    <div class="container">
+      <div class="card"><h3>★★★★★</h3><p>Best institute for learning Python and Web Development.</p></div>
+      <div class="card"><h3>★★★★★</h3><p>Very good practical training and lab facilities.</p></div>
+      <div class="card"><h3>★★★★★</h3><p>Friendly faculty and career guidance support.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ MATHEMATICS ACADEMY PAGE ============ -->
+<main class="page" id="page-math">
+
+  <section class="hero">
+    <h1>📚 Mathematics Academy</h1>
+    <p>Building strong mathematics foundations for every student.<br>Physical Classes: 1st–10th Standard &nbsp;|&nbsp; Online: 6th–10th, Intermediate & Polytechnic</p>
+    <button class="btn" onclick="document.getElementById('math-courses').scrollIntoView({behavior:'smooth'})">View Courses</button>
+  </section>
+
+  <section class="section">
+    <h2 class="title">About Us</h2>
+    <div class="container">
+      <div class="card" style="width:min(760px,100%);">
+        <p>Mathematics Academy is dedicated to providing quality education with experienced teachers and modern teaching methods. We offer Physical Classes from 1st to 10th standard and Online Mathematics Classes for 6th to 10th and Intermediate students, covering both State Syllabus (SCERT) and CBSE Syllabus (NCERT).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="math-courses">
+    <h2 class="title">📚 Mathematics Courses</h2>
+    <div class="course-container">
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600">
+        <h2>School Mathematics</h2>
+        <p>📖 Coaching for 6th–10th Classes with SCERT & CBSE (NCERT) syllabus.</p>
+        <h4>Level: Beginner → Advanced</h4>
+        <button onclick="openForm('School Mathematics (6th–10th)','Mathematics Academy')">Join Now</button>
+      </div>
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600">
+        <h2>Intermediate Mathematics</h2>
+        <p>🎓 Complete Intermediate Maths for MPC students with concept-based learning.</p>
+        <h4>Level: Intermediate → Advanced</h4>
+        <button onclick="openForm('Intermediate Mathematics (1st–2nd Year)','Mathematics Academy')">Join Now</button>
+      </div>
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600">
+        <h2>Polytechnic Subjects</h2>
+        <p>🏛️ Polytechnic Mathematics coaching for Diploma students.</p>
+        <h4>Level: Advanced</h4>
+        <button onclick="openForm('Polytechnic Mathematics (1st–3rd Year)','Mathematics Academy')">Join Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="title">Our Learning Environment</h2>
+    <div class="container">
+      <div class="card"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600" style="width:100%;border-radius:14px;margin-bottom:12px;"><h3>Classroom Learning</h3><p>Interactive physical classes from 1st to 10th standard.</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600" style="width:100%;border-radius:14px;margin-bottom:12px;"><h3>Online Mathematics Classes</h3><p>Live online classes for 6th–10th and Intermediate students.</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600" style="width:100%;border-radius:14px;margin-bottom:12px;"><h3>Student Success</h3><p>Building confidence, knowledge and bright futures.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="title">Why Choose Us?</h2>
+    <div class="container">
+      <div class="card" style="width:min(700px,100%);">
+        <p style="font-size:17px; line-height:2;">
+          ✔ Experienced Mathematics Teachers<br>
+          ✔ SCERT State Syllabus Coaching<br>
+          ✔ CBSE NCERT Mathematics Coaching<br>
+          ✔ Online and Offline Classes<br>
+          ✔ Weekly Tests & Progress Reports<br>
+          ✔ Personal Attention to Every Student
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="title">Admission / Enquiry Form</h2>
+    <div class="panel-box" style="text-align:center;">
+      <input type="text" id="me-name" placeholder="Student Name">
+      <input type="text" id="me-father" placeholder="Father Name">
+      <input type="tel" id="me-phone" placeholder="Phone Number" maxlength="10">
+      <select id="me-class">
+        <option value="">Select Class</option>
+        <option>1st Class</option><option>2nd Class</option><option>3rd Class</option>
+        <option>4th Class</option><option>5th Class</option><option>6th Class</option>
+        <option>7th Class</option><option>8th Class</option><option>9th Class</option>
+        <option>10th Class</option><option>Intermediate 1st Year</option><option>Intermediate 2nd Year</option>
+      </select>
+      <select id="me-syllabus">
+        <option value="">Select Syllabus</option>
+        <option>State (SCERT)</option><option>CBSE (NCERT)</option>
+      </select>
+      <select id="me-type">
+        <option value="">Choose Type of Class</option>
+        <option>Online</option><option>Offline (Physical Class)</option><option>Both Online & Offline</option>
+      </select>
+      <button class="btn gold" onclick="sendMathEnquiry()">🟢 Send Enquiry on WhatsApp</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="title">What Students Say</h2>
+    <div class="container">
+      <div class="card"><h3>★★★★★</h3><p>"Mathematics Academy helped me improve my concepts and scores."</p></div>
+      <div class="card"><h3>★★★★★</h3><p>"Best online and offline classes with excellent teaching methods."</p></div>
+      <div class="card"><h3>★★★★★</h3><p>"Regular tests and personal attention made my learning easy."</p></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ CONTACT PAGE ============ -->
+<main class="page" id="page-contact">
+  <section class="hero" style="min-height:40vh;">
+    <h1>📞 Contact Us</h1>
+    <p>We'd love to hear from you — reach out about admissions, courses or timings.</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card"><h2>Institute</h2><p>Firmware Institute of Technology</p></div>
+      <div class="card"><h2>Address</h2><p>📍 Papaiahpet Chaman, Warangal, Telangana</p></div>
+      <div class="card"><h2>Phone</h2><p>📞 +91 9603312393</p></div>
+      <div class="card"><h2>Email</h2><p>📧 firmwarelearning@gmail.com</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="title">Send a Message</h2>
+    <div class="panel-box" style="text-align:center;">
+      <input type="text" id="ct-name" placeholder="Your Name">
+      <input type="email" id="ct-email" placeholder="Your Email">
+      <textarea id="ct-message" placeholder="Your Message" style="min-height:110px;"></textarea>
+      <button class="btn gold" onclick="sendContactMessage()">Send via WhatsApp</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="title">📍 Our Location</h2>
+    <iframe class="map-frame" src="https://maps.google.com/maps?q=Papaiahpet%20Chaman%20Warangal&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+  </section>
+</main>
+
+<footer>
+  <h2>Firmware Institute of Technology</h2>
+  <p>Empowering Students with Knowledge, Technology & Innovation</p>
+  <p>📍 Papaiahpet Chaman, Warangal &nbsp; | &nbsp; 📞 +91 9603312393</p>
+  <p>© 2026 Firmware Institute of Technology. All Rights Reserved.</p>
+</footer>
+
+<!-- floating buttons -->
+<a href="tel:+919603312393" class="floating-call" title="Call Now">📞</a>
+<a href="#" class="floating-whatsapp" title="WhatsApp" onclick="event.preventDefault(); window.open('https://wa.me/919603312393','_blank');">💬</a>
+<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">⬆</button>
+<button class="dark-btn" onclick="document.body.classList.toggle('dark')" title="Toggle dark mode">🌙</button>
+
+<!-- shared admission popup -->
+<div id="admissionPopup" class="popup">
+  <div class="popup-box">
+    <span class="close" onclick="closeForm()">❌</span>
+    <h2>🎓 Course Admission</h2>
+    <input type="text" id="ap-name" placeholder="Student Name">
+    <input type="text" id="ap-father" placeholder="Father Name">
+    <input type="tel" id="ap-phone" placeholder="Phone Number">
+    <input type="text" id="ap-course" readonly>
+    <input type="text" id="ap-academy" readonly>
+    <input type="text" id="ap-class" placeholder="Class (e.g. 10th, Inter, Degree)">
+    <select id="ap-syllabus">
+      <option value="">Select Syllabus (if applicable)</option>
+      <option>State (SCERT)</option>
+      <option>CBSE (NCERT)</option>
+      <option>Not Applicable</option>
+    </select>
+    <select id="ap-type">
+      <option value="">Choose Class Type</option>
+      <option>Online</option>
+      <option>Offline (Physical)</option>
+      <option>Both Online & Offline</option>
+    </select>
+    <button class="btn gold" style="width:100%;" onclick="submitAdmission()">📩 Submit via WhatsApp</button>
+  </div>
+</div>
+
+<script>
+const WHATSAPP_NUMBER = "919603312393";
+
+/* ---------- Page navigation ---------- */
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelectorAll('.navbtn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.navbtn[data-page="' + id + '"]').classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+/* ---------- Loader ---------- */
+window.addEventListener('load', () => {
+  setTimeout(() => { document.getElementById('loader').style.display = 'none'; }, 1400);
+});
+
+/* ---------- Shared admission popup ---------- */
+function openForm(course, academy){
+  document.getElementById('ap-course').value = course;
+  document.getElementById('ap-academy').value = academy;
+  document.getElementById('admissionPopup').classList.add('open');
+}
+function closeForm(){
+  document.getElementById('admissionPopup').classList.remove('open');
+}
+function submitAdmission(){
+  const name = document.getElementById('ap-name').value.trim();
+  const father = document.getElementById('ap-father').value.trim();
+  const phone = document.getElementById('ap-phone').value.trim();
+  const course = document.getElementById('ap-course').value;
+  const academy = document.getElementById('ap-academy').value;
+  const studentClass = document.getElementById('ap-class').value.trim();
+  const syllabus = document.getElementById('ap-syllabus').value;
+  const type = document.getElementById('ap-type').value;
+
+  if(!name || !phone){
+    alert('Please fill in the student name and phone number.');
+    return;
+  }
+
+  const lines = [
+    '🎓 FIRMWARE INSTITUTE OF TECHNOLOGY',
+    '📋 New Admission Request',
+    '',
+    'Academy: ' + academy,
+    'Course: ' + course,
+    'Student Name: ' + name,
+    father ? 'Father Name: ' + father : '',
+    'Phone: ' + phone,
+    studentClass ? 'Class: ' + studentClass : '',
+    syllabus ? 'Syllabus: ' + syllabus : '',
+    type ? 'Class Type: ' + type : ''
+  ].filter(Boolean);
+
+  const url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
+  window.open(url, '_blank');
+  closeForm();
+}
+
+/* ---------- Home quick admission form ---------- */
+function sendQuickAdmission(){
+  const name = document.getElementById('qa-name').value.trim();
+  const father = document.getElementById('qa-father').value.trim();
+  const phone = document.getElementById('qa-phone').value.trim();
+  const course = document.getElementById('qa-course').value;
+  const type = document.getElementById('qa-type').value;
+
+  if(!name || !phone){
+    alert('Please fill in the student name and phone number.');
+    return;
+  }
+
+  const lines = [
+    '🎓 Firmware Institute of Technology — Quick Admission',
+    'Student Name: ' + name,
+    father ? 'Father Name: ' + father : '',
+    'Phone: ' + phone,
+    course ? 'Course: ' + course : '',
+    type ? 'Class Type: ' + type : ''
+  ].filter(Boolean);
+
+  window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+}
+
+/* ---------- Math academy enquiry form ---------- */
+function sendMathEnquiry(){
+  const name = document.getElementById('me-name').value.trim();
+  const father = document.getElementById('me-father').value.trim();
+  const phone = document.getElementById('me-phone').value.trim();
+  const cls = document.getElementById('me-class').value;
+  const syllabus = document.getElementById('me-syllabus').value;
+  const type = document.getElementById('me-type').value;
+
+  if(!name || !phone){
+    alert('Please fill in the student name and phone number.');
+    return;
+  }
+
+  const lines = [
+    '🎓 Mathematics Academy — New Enquiry',
+    'Student Name: ' + name,
+    father ? 'Father Name: ' + father : '',
+    'Phone: ' + phone,
+    cls ? 'Class: ' + cls : '',
+    syllabus ? 'Syllabus: ' + syllabus : '',
+    type ? 'Class Type: ' + type : ''
+  ].filter(Boolean);
+
+  window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+}
+
+/* ---------- Contact page message ---------- */
+function sendContactMessage(){
+  const name = document.getElementById('ct-name').value.trim();
+  const email = document.getElementById('ct-email').value.trim();
+  const message = document.getElementById('ct-message').value.trim();
+
+  if(!name){
+    alert('Please enter your name.');
+    return;
+  }
+
+  const lines = [
+    '📩 New Contact Message — Firmware Institute of Technology',
+    'Name: ' + name,
+    email ? 'Email: ' + email : '',
+    message ? 'Message: ' + message : ''
+  ].filter(Boolean);
+
+  window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+}
+
+/* ---------- Coding playground ---------- */
+function runCode(){
+  const code = document.getElementById('codeArea').value;
+  document.getElementById('output').srcdoc = code;
+}
+
+/* ---------- Quick exam checker ---------- */
+function checkExam(){
+  let score = 0;
+  document.querySelectorAll('input[type="radio"]:checked').forEach(a => score += Number(a.value));
+  const msg = score >= 3
+    ? '🏆 Congratulations! You passed with ' + score + '/3.'
+    : '❌ Not quite — your score is ' + score + '/3. Try again!';
+  document.getElementById('result').innerHTML = msg;
+}
+
+/* ---------- Animated counters (home stats) ---------- */
+function animateCounter(el, target, suffix){
+  let count = 0;
+  const step = Math.max(1, Math.ceil(target / 80));
+  const tick = () => {
+    count += step;
+    if(count >= target){ el.innerHTML = target + suffix; return; }
+    el.innerHTML = count + suffix;
+    requestAnimationFrame(tick);
+  };
+  tick();
+}
+const statsSection = document.querySelector('#statStudents')?.closest('section');
+if(statsSection){
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        animateCounter(document.getElementById('statStudents'), 3200, '+');
+        animateCounter(document.getElementById('statCourses'), 15, '+');
+        animateCounter(document.getElementById('statTeachers'), 10, '+');
+        animateCounter(document.getElementById('statSuccess'), 95, '%');
+        statsObserver.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.4});
+  statsObserver.observe(statsSection);
+}
+
+/* ---------- Progress bar (computer academy dashboard) ---------- */
+const ctProgressEl = document.getElementById('ctProgress');
+if(ctProgressEl){
+  const progObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        const target = Number(ctProgressEl.dataset.target);
+        ctProgressEl.style.width = target + '%';
+        ctProgressEl.textContent = target + '%';
+        progObserver.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.4});
+  progObserver.observe(ctProgressEl);
+}
+
+/* ---------- Scroll-to-top visibility ---------- */
+window.addEventListener('scroll', () => {
+  document.getElementById('topBtn').style.display = window.scrollY > 400 ? 'flex' : 'none';
+});
+</script>
+
+</body>
+</html>
